@@ -367,6 +367,15 @@ html{scroll-behavior:smooth}
 @media (min-width:900px){#cf-book{left:auto;right:76px;transform:translateY(20px)}#cf-book.show{transform:none}}
 @media (prefers-reduced-motion:reduce){.js-motion .rv{opacity:1;transform:none;transition:none}#cf-top,#cf-book{transition:none}}
 </style>
+<style id="features">
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+ background:radial-gradient(40vmax 40vmax at 12% 8%,rgba(79,107,130,.14),transparent 60%),
+ radial-gradient(36vmax 36vmax at 90% 30%,rgba(200,67,26,.09),transparent 60%),
+ radial-gradient(40vmax 40vmax at 30% 95%,rgba(79,107,130,.10),transparent 60%);
+ animation:cfglow 22s ease-in-out infinite alternate}
+@keyframes cfglow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-2%,2%,0) scale(1.06)}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -533,6 +542,34 @@ html{scroll-behavior:smooth}
       <div class="way"><h3>Tested before hand-over</h3><p>We check the work against what we agreed, then hand over documentation and a walkthrough.</p></div>
       <div class="way"><h3>Confidential by default</h3><p>Your systems, data and business details stay private. We are happy to sign an NDA before work starts.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="cyber">
+  <p class="kicker">Cybersecurity</p>
+  <h2 style="margin-top:14px">Practical security for your systems</h2>
+  <p class="lede" style="margin-top:14px">We help close the common gaps that cause real problems: weak access control, unpatched devices, open cloud settings and missing backups.</p>
+  <div class="ways" style="margin-top:22px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+    <div class="way"><h3>Identity and access</h3><p>Multi-factor sign-in, least-privilege roles and clean joiner and leaver processes.</p></div>
+    <div class="way"><h3>Devices and endpoints</h3><p>Hardened laptops and servers, patching and managed device policies.</p></div>
+    <div class="way"><h3>Cloud security review</h3><p>Checks of AWS accounts for risky permissions, exposed storage and missing logging.</p></div>
+    <div class="way"><h3>Network protection</h3><p>Firewall and VPN review, segmentation and safer remote access.</p></div>
+    <div class="way"><h3>Backup and recovery</h3><p>Backups that are tested, so a restore works when you need it.</p></div>
+    <div class="way"><h3>Staff awareness</h3><p>Short, practical guidance for your team on phishing and safe working.</p></div>
+  </div>
+  <p class="fine" style="margin-top:18px">We provide security assessments and hardening support. These are not certified audits or compliance attestations.</p>
+</section>
+
+<section id="industries">
+  <p class="kicker">Who we help</p>
+  <h2 style="margin-top:14px">Built for organisations that depend on their IT</h2>
+  <div class="ways" style="margin-top:22px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))">
+    <div class="way"><h3>Small and medium business</h3><p>Reliable IT and cloud without a full in-house team.</p></div>
+    <div class="way"><h3>Healthcare administration</h3><p>Careful handling of systems and access in busy environments.</p></div>
+    <div class="way"><h3>Logistics and warehousing</h3><p>Devices, networks and on-site support that keep operations moving.</p></div>
+    <div class="way"><h3>Professional services</h3><p>Secure email, files and collaboration for office teams.</p></div>
+    <div class="way"><h3>Education and training</h3><p>Environments and online delivery for learning providers.</p></div>
+    <div class="way"><h3>Startups and technology teams</h3><p>Cloud foundations and automation that scale with you.</p></div>
   </div>
 </section>
 
