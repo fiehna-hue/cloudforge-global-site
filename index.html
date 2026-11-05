@@ -88,7 +88,7 @@
     "@id": "https://cloudforgeglobal.com/#business"
    },
    "email": "info@cloudforgeglobal.com",
-   "description": "A six-month training program in networking, AWS, DevOps and ML/AI."
+   "description": "A six-month live online program in AWS, Azure, DevSecOps, cloud security and AI-assisted operations."
   }
  ]
 }
@@ -287,6 +287,24 @@ footer nav a { color: var(--muted); }
 :root[data-theme="dark"] .lockup .on-light { display: none; }
 :root[data-theme="dark"] .lockup .on-dark { display: block; }
 
+@media (min-width: 861px) {
+  .path.six { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 20px; }
+}
+.path.six .stage .bar { border-radius: 7px !important; }
+.path.six .stage:nth-child(1) { --c: var(--h1); }
+.path.six .stage:nth-child(2) { --c: color-mix(in srgb, var(--h1) 55%, var(--h2)); }
+.path.six .stage:nth-child(3) { --c: var(--h2); }
+.path.six .stage:nth-child(4) { --c: color-mix(in srgb, var(--h2) 55%, var(--h3)); }
+.path.six .stage:nth-child(5) { --c: var(--h3); }
+.path.six .stage:nth-child(6) { --c: var(--h4); }
+.path.six .stage:nth-child(5) .bar { animation-delay: 0.8s; }
+.path.six .stage:nth-child(6) .bar { animation-delay: 1s; }
+#academy .tracks-grid { grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); }
+.cohort .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.cohort .actions .btn { margin-top: 0; }
+.cohort .btn:not(.primary) { color: var(--bg); border-color: color-mix(in srgb, var(--bg) 55%, transparent); }
+.cohort .btn:not(.primary):hover { background: color-mix(in srgb, var(--bg) 12%, transparent); }
+
 @media (max-width: 420px) {
   .head-actions .btn.primary { display: none; }
 }
@@ -331,7 +349,7 @@ footer nav a { color: var(--muted); }
   </div>
   <dl class="facts">
     <div><dt>Services</dt><dd>6</dd></div>
-    <div><dt>Training tracks</dt><dd>4</dd></div>
+    <div><dt>Training tracks</dt><dd>5</dd></div>
     <div><dt>Next cohort</dt><dd>9 Nov 2026</dd></div>
     <div><dt>Contact</dt><dd>By email</dd></div>
   </dl>
@@ -380,8 +398,8 @@ footer nav a { color: var(--muted); }
     <article class="svc">
       <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v5"/></svg></div>
       <h3>Training academy</h3>
-      <p>A six-month program in networking, AWS, DevOps and ML/AI, led by a senior engineer.</p>
-      <ul><li>Next cohort starts 9 November</li><li>Four skill tracks</li><li>Hands-on labs and a capstone project</li><li>Interview preparation</li></ul>
+      <p>A six-month live online program in AWS, Azure, DevSecOps, cloud security and AI-assisted operations, led by a senior engineer.</p>
+      <ul><li>Next cohort starts 9 November</li><li>Five course tracks</li><li>Hands-on labs and six capstone projects</li><li>Career and interview preparation</li></ul>
       <a class="more" href="#academy">See the academy <span aria-hidden="true">&rarr;</span></a>
     </article>
   </div>
@@ -445,24 +463,51 @@ footer nav a { color: var(--muted); }
 <section id="academy">
   <p class="kicker">CloudForge Academy</p>
   <h2 style="margin-top:14px">Train for a cloud career with a working engineer</h2>
-  <p class="lede" style="margin-top:14px">A six-month program covering networking, AWS, DevOps and ML/AI, led by a senior developer and senior DevSecOps engineer. You practise on real systems, so you can explain your work in an interview.</p>
+  <p class="lede" style="margin-top:14px">A six-month live online program across AWS, Azure, CI/CD, infrastructure as code, Kubernetes, cloud security and AI-assisted operations. You finish with six practical capstone projects and a portfolio you can show employers.</p>
   <div class="lockup">
     <img class="on-light" src="/logo-light.webp" width="1200" height="420" alt="CloudForge Global Academy. Your Global Technology Career Starts Here." loading="lazy">
     <img class="on-dark" src="/logo-dark.webp" width="1200" height="420" alt="CloudForge Global Academy. Your Global Technology Career Starts Here." loading="lazy">
   </div>
 
-  <div class="path">
-    <div class="stage"><div class="bar"></div><p class="when">Months 1 and 2</p><h3>Foundations</h3><p>Networking from IP addressing and DNS to routing, plus Linux, Git and scripting. The base everything else sits on.</p></div>
-    <div class="stage"><div class="bar"></div><p class="when">Months 3 and 4</p><h3>AWS</h3><p>Identity, networks, servers, storage, databases, load balancing and monitoring, built and secured by hand.</p></div>
-    <div class="stage"><div class="bar"></div><p class="when">Month 5</p><h3>DevOps</h3><p>Containers, infrastructure as code and pipelines, with security checks built into every change.</p></div>
-    <div class="stage"><div class="bar"></div><p class="when">Month 6</p><h3>ML/AI and capstone</h3><p>Machine learning and AI services on the cloud, then a capstone project and interview preparation.</p></div>
+  <div class="subhead">
+    <p class="kicker">The six-month roadmap</p>
+  </div>
+  <div class="path six">
+    <div class="stage"><div class="bar"></div><p class="when">Month 1</p><h3>Foundations and AWS core</h3><p>Linux, networking, Git and Python, then AWS core services. Outcome: a secure AWS environment.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 2</p><h3>AWS design and Azure basics</h3><p>AWS solution design and Azure fundamentals. Outcome: an AWS architecture with an Azure comparison.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 3</p><h3>Terraform, Ansible and CI/CD</h3><p>Infrastructure as code, configuration management and pipelines with Jenkins and GitHub Actions. Outcome: a reviewed delivery pipeline.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 4</p><h3>Containers and GitOps</h3><p>Docker, Kubernetes, Helm, GitOps and observability. Outcome: a container workload with a dashboard.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 5</p><h3>Security and resilience</h3><p>Supply-chain security, backup and recovery, and incident response. Outcome: a secure pipeline and a response drill.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 6</p><h3>AIOps and capstone</h3><p>AI-assisted operations with human approval, then the integrated capstone. Outcome: a portfolio defence.</p></div>
+  </div>
+  <p class="fine">This is the proposed month-by-month plan. Exact pacing and weekly hours are agreed for each batch.</p>
+
+  <div class="subhead">
+    <p class="kicker">Five course tracks</p>
+    <p class="lede" style="margin-top:14px">Each track can also be taken on its own. In the full program they build on each other toward one platform.</p>
+  </div>
+  <div class="tracks-grid">
+    <article class="track"><h3>AWS Solutions Architect Associate (SAA-C03)</h3><p>Design secure, resilient and efficient AWS solutions across VPC, compute, storage, databases, serverless, monitoring and recovery.</p><div class="tags"><span>VPC</span><span>EC2</span><span>S3</span><span>RDS</span><span>Lambda</span></div></article>
+    <article class="track"><h3>DevSecOps: automation, delivery and security</h3><p>Build delivery workflows from Git and CI/CD through Terraform, Docker, Kubernetes, GitOps, observability and supply-chain security.</p><div class="tags"><span>Git</span><span>Jenkins</span><span>GitHub Actions</span><span>Terraform</span><span>Docker</span><span>Kubernetes</span></div></article>
+    <article class="track"><h3>Azure administration and solution architecture foundations</h3><p>Operate Azure identities, networks, compute, storage and governance, with introductory solution architecture and repeatable deployments.</p><div class="tags"><span>Entra ID</span><span>VNet</span><span>ARM</span><span>AKS</span><span>Azure DevOps</span></div></article>
+    <article class="track"><h3>AWS cloud security and DevSecOps</h3><p>Apply threat modeling, IAM guardrails, encryption, detection, supply-chain security and incident response to AWS environments.</p><div class="tags"><span>IAM</span><span>KMS</span><span>GuardDuty</span><span>WAF</span><span>Security Hub</span></div></article>
+    <article class="track"><h3>AI and DevOps: AIOps and MLOps foundations</h3><p>Use AI safely to review infrastructure code, summarize operational evidence, detect anomalies and support human-approved fixes.</p><div class="tags"><span>AIOps</span><span>MLOps</span><span>CloudWatch</span><span>Bedrock</span><span>Grafana</span></div></article>
   </div>
 
-  <div class="tracks-grid">
-    <article class="track"><h3>Networking</h3><p>How traffic actually moves, so cloud networks stop being guesswork.</p><div class="tags"><span>TCP/IP</span><span>DNS</span><span>Routing</span><span>VPC</span><span>VPN</span></div></article>
-    <article class="track"><h3>AWS</h3><p>The core services employers expect you to run, secure and troubleshoot.</p><div class="tags"><span>IAM</span><span>EC2</span><span>S3</span><span>RDS</span><span>CloudWatch</span></div></article>
-    <article class="track"><h3>DevOps</h3><p>Automate infrastructure and delivery, with security part of the pipeline.</p><div class="tags"><span>Linux</span><span>Git</span><span>Docker</span><span>Terraform</span><span>CI/CD</span></div></article>
-    <article class="track"><h3>ML/AI</h3><p>Move from notebooks to working services on the cloud.</p><div class="tags"><span>Python</span><span>Data pipelines</span><span>Model deployment</span><span>AI services</span></div></article>
+  <div class="subhead split">
+    <div>
+      <p class="kicker">Capstone projects</p>
+      <h2 style="margin-top:14px">Six projects you can show employers</h2>
+      <p class="lede" style="margin-top:14px">Every track ends with required submissions and a live demonstration. The sixth project brings the earlier ones together.</p>
+    </div>
+    <div class="ways">
+      <div class="way"><h3>1. Highly available three-tier application</h3><p>On AWS. Fail a web-tier instance, show the service recover, and explain the trade-offs.</p></div>
+      <div class="way"><h3>2. End-to-end secure delivery platform</h3><p>Commit a change, pass the security gates, deploy through GitOps and roll back.</p></div>
+      <div class="way"><h3>3. Secure Azure enterprise application</h3><p>Deploy to staging, verify Key Vault access and show recovery monitoring.</p></div>
+      <div class="way"><h3>4. Defense in depth and incident response</h3><p>Inject a misconfiguration, detect it, block the release and carry out an approved containment.</p></div>
+      <div class="way"><h3>5. AI-assisted operations and incident triage</h3><p>Inject an incident. The AI explains the evidence and suggests a fix, and the operator approves a reversible action.</p></div>
+      <div class="way"><h3>6. Secure, observable cloud delivery platform</h3><p>From pull request to a production-like release, with a rejected unsafe build, a diagnosed incident, a reviewed rollback and a written postmortem.</p></div>
+    </div>
   </div>
 
   <div class="cohort" id="cohort">
@@ -470,15 +515,19 @@ footer nav a { color: var(--muted); }
       <p class="kicker">Next cohort</p>
       <h2>Starts Monday 9 November</h2>
       <p class="lede">The full six-month program, from foundations to a capstone project.</p>
-      <details>
-        <summary>What you need to know before enquiring</summary>
+      <details open>
+        <summary>Schedule and details</summary>
         <ul>
-          <li>Duration: six months.</li>
-          <li>Tracks: networking, AWS, DevOps and ML/AI.</li>
-          <li>Session times and fees are shared when you enquire, so we can match your time zone.</li>
+          <li>Format: live online, instructor-led.</li>
+          <li>Schedule: Monday to Thursday and Saturday, in 90-minute classes.</li>
+          <li>Class time: 8:00 to 9:30 PM Eastern Time (EST).</li>
+          <li>Open to students in the USA, Africa and worldwide.</li>
+          <li>Fees and batch details are confirmed when you enquire.</li>
         </ul>
       </details>
-      <a class="btn primary" href="#enquire" data-service="Training: the full six-month program">Enquire about the academy</a>
+      <div class="actions">
+        <a class="btn primary" href="#enquire" data-service="Training: the full six-month program">Enquire about the academy</a>
+      </div>
     </div>
     <aside class="teacher">
       <p class="kicker">Lead instructor</p>
@@ -496,10 +545,15 @@ footer nav a { color: var(--muted); }
     <details><summary>Can I see examples of your work?</summary><p>Yes. Our projects are public on GitHub, with the code and the incident notes. See the Selected work section.</p></details>
     <details><summary>How do I request a service?</summary><p>Choose the service in the form below and tell us what you need. We reply by email with the next steps.</p></details>
     <details><summary>What does it cost?</summary><p>It depends on the scope of the work. We share a clear figure once we understand what you need.</p></details>
-    <details><summary>How do I join the academy?</summary><p>Choose the academy in the form below. We reply with the schedule, the fees and the next steps for the 9 November cohort.</p></details>
-    <details><summary>Which time zone are the academy sessions in?</summary><p>We are a global academy. Tell us where you are in your enquiry and we will confirm the session times.</p></details>
+    <details><summary>How do I join the academy?</summary><p>Choose the academy in the form below. We reply with the fees, the batch details and the next steps for the 9 November cohort.</p></details>
+    <details><summary>When are the academy classes?</summary><p>Live online, Monday to Thursday and Saturday, in 90-minute classes from 8:00 to 9:30 PM Eastern Time (EST). The program is open to students in the USA, Africa and worldwide. Tell us where you are in your enquiry and we will help you plan around your time zone.</p></details>
+    <details><summary>Can I join only one course?</summary><p>Yes. Each of the five tracks can be taken on its own. Students in the full program follow one coordinated pathway across all five.</p></details>
+    <details><summary>Is the academy suitable for beginners?</summary><p>The early weeks introduce Linux, networking, Git and cloud basics. If you lack scripting or operating-system experience, we will give you preparation exercises. Tell us your background in your enquiry and we will tell you honestly whether the program fits.</p></details>
+    <details><summary>Does the academy guarantee AWS or Microsoft certification?</summary><p>No. The AWS architecture track is aligned to SAA-C03 preparation, and the Azure track covers administration and introductory architecture foundations. Exam registration and certification are separate, and we do not promise a job.</p></details>
+    <details><summary>Do I need my own AWS or Azure account?</summary><p>Account requirements and lab credits are confirmed for each batch. You get a cost-conscious lab plan and must follow the budget and cleanup instructions.</p></details>
+    <details><summary>Will AI make live changes to infrastructure?</summary><p>No. Live-changing actions need human approval. Automatic fixes are practised only in isolated simulations or expressly authorized sandbox environments.</p></details>
     <details><summary>Who teaches the academy?</summary><p>A senior developer and senior DevSecOps engineer with more than 22 years of experience. The academy is led by its founder.</p></details>
-    <details><summary>Do I need experience to join the academy?</summary><p>Tell us your background in your enquiry. The first two months build the foundations, and we will tell you honestly whether the program fits.</p></details>
+    <details><summary>Do you provide recordings, certificates, placement help or exam vouchers?</summary><p>Availability and terms depend on the batch. Ask us when you enquire, and we will confirm what is included.</p></details>
   </div>
 </section>
 
