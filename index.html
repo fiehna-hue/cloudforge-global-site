@@ -481,21 +481,24 @@ footer nav a { color: var(--muted); }
     <div>
       <p class="kicker">Contact</p>
       <h2 style="margin-top:14px">Tell us what you need</h2>
-      <p class="lede" style="margin-top:14px">We reply by email. Write your enquiry here, then send it to this address.</p>
+      <p class="lede" style="margin-top:14px">Send your enquiry here and we will reply by email. You can also write to us directly.</p>
       <div class="mail-line">
         <code id="addr">academycloudforge@gmail.com</code>
         <button class="btn" id="copyaddr" type="button">Copy address</button>
       </div>
     </div>
-    <form id="enq" novalidate>
-      <label for="name">Your name<input id="name" autocomplete="name" placeholder="Full name"></label>
+    <form id="enq" action="https://formspree.io/f/mgaadrag" method="POST" novalidate>
+      <label for="name">Your name<input id="name" name="name" autocomplete="name" placeholder="Full name"></label>
+      <label for="email">Your email<input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
       <label for="track">What are you interested in?
-        <select id="track">
+        <select id="track" name="service">
           <option>Cloud services</option><option>Network engineering services</option><option>Help desk services</option><option>Field technician services</option><option>IT solution services</option><option>Training: the full six-month program</option><option>Training: one track only</option>
         </select>
       </label>
-      <label for="msg">Tell us about your need and your location<textarea id="msg" placeholder="What you need done, or your background if you are asking about training, and the country or time zone you are in"></textarea></label>
-      <button class="btn primary" type="submit">Prepare my enquiry</button>
+      <label for="msg">Tell us about your need and your location<textarea id="msg" name="message" placeholder="What you need done, or your background if you are asking about training, and the country or time zone you are in"></textarea></label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+      <button class="btn primary" type="submit" id="send">Send enquiry</button>
+      <p class="status" id="formstatus" aria-live="polite"></p>
       <div class="draft" id="draft" aria-live="polite">
         <pre id="draftText"></pre>
         <div class="row">
@@ -551,8 +554,7 @@ footer nav a { color: var(--muted); }
   });
 
   var addr = "academycloudforge@gmail.com";
-  document.getElementById("enq").addEventListener("submit", function (e) {
-    e.preventDefault();
+  function buildDraft() {
     var name = document.getElementById("name").value.trim() || "(your name)";
     var track = document.getElementById("track").value;
     var msg = document.getElementById("msg").value.trim() || "(your need and your location)";
@@ -562,6 +564,23 @@ footer nav a { color: var(--muted); }
     document.getElementById("draftText").textContent = "To: " + addr + "\nSubject: " + subject + "\n\n" + body;
     document.getElementById("mailto").setAttribute("href", "mailto:" + addr + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body));
     document.getElementById("draft").classList.add("show");
+  }
+  var form = document.getElementById("enq");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var st = document.getElementById("formstatus");
+    var email = document.getElementById("email").value.trim();
+    var msg = document.getElementById("msg").value.trim();
+    if (email.indexOf("@") < 1 || !msg) { st.textContent = "Please add your email and a short message."; return; }
+    var btn = document.getElementById("send");
+    btn.disabled = true; st.textContent = "Sending...";
+    fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+      .then(function (r) {
+        if (!r.ok) { throw new Error("send failed"); }
+        form.reset(); st.textContent = "Thank you. Your enquiry was sent. We will reply by email.";
+      })
+      .catch(function () { st.textContent = "Sorry, that did not send. Use the draft below, or email us directly."; buildDraft(); })
+      .then(function () { btn.disabled = false; });
   });
   document.getElementById("copydraft").addEventListener("click", function () {
     copy(document.getElementById("draftText").textContent, "Enquiry");
