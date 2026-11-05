@@ -376,6 +376,21 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
 @keyframes cfglow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-2%,2%,0) scale(1.06)}}
 @media (prefers-reduced-motion:reduce){body::before{animation:none}}
 </style>
+<style id="footer-upgrade">
+footer{display:grid!important;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px 32px!important;align-items:start}
+footer .f-col{display:flex;flex-direction:column;gap:8px}
+footer .f-col h4{margin:0 0 4px;color:var(--ink);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+footer .f-brand strong{color:var(--ink);font-size:1.05rem}
+footer .f-brand p{margin:0}
+footer .f-col a{color:var(--muted)}
+footer .f-col a:hover{color:var(--accent)}
+footer .f-copy{grid-column:1/-1;margin:8px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:.85rem}
+@media (max-width:820px){footer{grid-template-columns:1fr 1fr!important}.f-brand{grid-column:1/-1}}
+@media (max-width:480px){footer{grid-template-columns:1fr!important}}
+.js-motion .stage .bar{transform-origin:left;transform:scaleX(0);transition:transform .9s ease .25s}
+.js-motion .stage.in .bar{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){.js-motion .stage .bar{transform:none;transition:none}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -722,9 +737,24 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;op
 </main>
 
 <footer>
-  <span>&copy; 2026 CloudForge Global<br>Cloud, network and IT services, and training</span>
-  <nav aria-label="Footer"><a href="#services">Services</a><a href="#process">How we work</a><a href="#academy">Academy</a><a href="#faq">FAQ</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
-  <span>Contact<br><a href="#enquire">info@cloudforgeglobal.com</a></span>
+  <div class="f-col f-brand">
+    <strong>CloudForge Global</strong>
+    <p>Cloud, network and IT services, and live online training.</p>
+    <p><a href="#enquire">info@cloudforgeglobal.com</a></p>
+  </div>
+  <nav class="f-col" aria-label="Services">
+    <h4>Services</h4>
+    <a href="#services">What we do</a><a href="#cyber">Cybersecurity</a><a href="#industries">Who we help</a><a href="#process">How we work</a>
+  </nav>
+  <nav class="f-col" aria-label="Academy">
+    <h4>Academy</h4>
+    <a href="#academy">Course tracks</a><a href="#cohort">Next cohort</a><a href="/CloudForge-Global-Academy-Programme-Guide.pdf">Programme guide (PDF)</a><a href="#faq">FAQ</a>
+  </nav>
+  <nav class="f-col" aria-label="Company">
+    <h4>Company</h4>
+    <a href="#enquire">Contact us</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a>
+  </nav>
+  <p class="f-copy">&copy; 2026 CloudForge Global. All rights reserved.</p>
 </footer>
 </div>
 
