@@ -271,6 +271,25 @@ footer nav a { color: var(--muted); }
 .rv.in { transform: none; animation: lift 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms) backwards; }
 .svc, .track, .role { transition: transform 0.25s ease, border-color 0.25s ease; }
 .svc:hover, .track:hover, .role:hover { transform: translateY(-4px); border-color: var(--accent); }
+.hero { position: relative; }
+.hero-art { display: none; }
+@media (min-width: 1000px) {
+  .hero-art { display: block; position: absolute; right: -10px; top: 24px; width: min(40%, 440px); height: auto; pointer-events: none; animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.3s both; }
+  .hero h1 { max-width: 15ch; font-size: clamp(2.3rem, 4.6vw, 3.9rem); }
+  .hero .lede { max-width: min(62ch, 54%); }
+}
+.hero-art .orbit { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 4 8; transform-origin: 240px 215px; animation: spin 60s linear infinite; }
+.hero-art .ring { fill: none; stroke: var(--accent); stroke-width: 1.5; opacity: 0; transform-origin: 240px 215px; animation: ping 3.2s ease-out infinite; }
+.hero-art .ring.r2 { animation-delay: 1.6s; }
+.hero-art .link { fill: none; stroke: var(--line); stroke-width: 2; }
+.hero-art .node circle:first-child { fill: var(--surface); stroke: var(--line); stroke-width: 2; }
+.hero-art .node .dot { fill: var(--accent); animation: pulse 2.8s ease-in-out infinite; }
+.hero-art .node text { fill: var(--muted); font: 600 13px var(--body, system-ui, sans-serif); }
+.hero-art .core path { fill: var(--accent); stroke: none; }
+.hero-art .pkt { fill: var(--accent); offset-rotate: 0deg; offset-distance: 0%; animation: travel 3.3s ease-in-out infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes ping { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(2.6); opacity: 0; } }
+@keyframes travel { 0% { offset-distance: 0%; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -330,7 +349,7 @@ footer nav a { color: var(--muted); }
     <span>CloudForge Global</span>
   </a>
   <nav class="links" aria-label="Sections">
-    <a href="#services">Services</a><a href="#process">How we work</a><a href="#work">Work</a><a href="#academy">Academy</a><a href="#faq">FAQ</a><a href="#enquire">Contact</a>
+    <a href="#services">Services</a><a href="#process">How we work</a><a href="#work">Typical jobs</a><a href="#academy">Academy</a><a href="#faq">FAQ</a><a href="#enquire">Contact</a>
   </nav>
   <div class="head-actions">
     <button class="btn icon-btn" id="theme" type="button" aria-label="Switch colour theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
@@ -340,6 +359,7 @@ footer nav a { color: var(--muted); }
 
 <main id="top">
 <section class="hero">
+  <svg class="hero-art" viewBox="0 0 480 440" aria-hidden="true" focusable="false"><circle class="orbit" cx="240" cy="215" r="150"/><circle class="ring" cx="240" cy="215" r="46"/><circle class="ring r2" cx="240" cy="215" r="46"/><path class="link" d="M240 215L240 65"/><path class="link" d="M240 215L370 140"/><path class="link" d="M240 215L370 290"/><path class="link" d="M240 215L240 365"/><path class="link" d="M240 215L110 290"/><path class="link" d="M240 215L110 140"/><circle class="pkt" style="offset-path:path('M240 215L240 65');animation-delay:0.0s" r="4"/><circle class="pkt" style="offset-path:path('M240 215L370 140');animation-delay:0.6s" r="4"/><circle class="pkt" style="offset-path:path('M240 215L370 290');animation-delay:1.1s" r="4"/><circle class="pkt" style="offset-path:path('M240 215L240 365');animation-delay:1.7s" r="4"/><circle class="pkt" style="offset-path:path('M240 215L110 290');animation-delay:2.2s" r="4"/><circle class="pkt" style="offset-path:path('M240 215L110 140');animation-delay:2.8s" r="4"/><g class="node"><circle cx="240" cy="65" r="26"/><circle class="dot" cx="240" cy="65" r="6"/><text x="240" y="29" text-anchor="middle">Cloud</text></g><g class="node"><circle cx="370" cy="140" r="26"/><circle class="dot" cx="370" cy="140" r="6"/><text x="370" y="104" text-anchor="middle">Network</text></g><g class="node"><circle cx="370" cy="290" r="26"/><circle class="dot" cx="370" cy="290" r="6"/><text x="370" y="334" text-anchor="middle">Help desk</text></g><g class="node"><circle cx="240" cy="365" r="26"/><circle class="dot" cx="240" cy="365" r="6"/><text x="240" y="409" text-anchor="middle">Field tech</text></g><g class="node"><circle cx="110" cy="290" r="26"/><circle class="dot" cx="110" cy="290" r="6"/><text x="110" y="334" text-anchor="middle">IT solutions</text></g><g class="node"><circle cx="110" cy="140" r="26"/><circle class="dot" cx="110" cy="140" r="6"/><text x="110" y="104" text-anchor="middle">Academy</text></g><g class="core" transform="translate(240 215) scale(2.6) translate(-12 -12)"><path d="M7 18a4 4 0 0 1-.6-7.96A5.5 5.5 0 0 1 17 8.6 4.7 4.7 0 0 1 17.5 18z"/></g></svg>
   <p class="kicker">Cloud, network and IT services, and training</p>
   <h1>Cloud, network and IT services from engineers who <em>do the work</em>.</h1>
   <p class="lede">CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services for businesses and individuals. Through CloudForge Academy we also train the next generation of cloud and DevOps engineers.</p>
@@ -432,14 +452,14 @@ footer nav a { color: var(--muted); }
 </section>
 
 <section id="work">
-  <p class="kicker">Selected work</p>
-  <h2 style="margin-top:14px">Built, broken, fixed and documented</h2>
-  <p class="lede" style="margin-top:14px">Our projects are public, so you can read the code and the incident notes before you hire us.</p>
-  <div class="tracks-grid">
-    <article class="track"><h3>Self-hosted collaboration platform</h3><p>A file collaboration service on AWS: containers, a managed database and shared storage behind a load balancer, all built with Terraform and a pull-request pipeline. Resilience proven by replacing the running container, with five incidents written up.</p><a class="more" href="https://github.com/fiehna-hue/collab-platform-aws" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
-    <article class="track"><h3>Cloud platform as code</h3><p>Reusable Terraform modules for networking, databases and services, deployed by a pipeline that plans on every pull request and applies on merge, with no stored AWS keys.</p><a class="more" href="https://github.com/fiehna-hue/aws-platform-as-code" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
-    <article class="track"><h3>Container hardening</h3><p>A Docker stack taken from a naive image to a hardened four-service setup: rebuilds from 11.8 to 1.8 seconds, security findings from 471 to 45, four documented incidents and a CI pipeline that tests, scans and publishes.</p><a class="more" href="https://github.com/fiehna-hue/docker-deep-dive" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
-    <article class="track"><h3>AWS cost guardrails</h3><p>A read-only scanner that finds billable AWS resources across every region, a Terraform budget module with alerts, and a daily scheduled scan.</p><a class="more" href="https://github.com/fiehna-hue/aws-cost-guardrails" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
+  <p class="kicker">Typical jobs</p>
+  <h2 style="margin-top:14px">What businesses usually call us for</h2>
+  <p class="lede" style="margin-top:14px">Tell us the problem in your own words. These are the jobs we are asked to do most often.</p>
+  <div class="tracks-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+    <article class="track"><h3>Moving to the cloud</h3><p>Planning and moving servers, files, email and applications to AWS or Microsoft 365, with a written plan and a clear hand-over.</p></article>
+    <article class="track"><h3>Office network and VPN</h3><p>Designing, setting up and securing office networks, Wi-Fi, firewalls and secure remote access for your team.</p></article>
+    <article class="track"><h3>Keeping your team working</h3><p>Help desk for user accounts, devices, email and software, so small problems get fixed before they stop anyone.</p></article>
+    <article class="track"><h3>On-site technical work</h3><p>A technician at your location for installs, cabling, equipment swaps and upgrades, then testing and documentation.</p></article>
   </div>
 
   <div class="subhead">
@@ -543,7 +563,7 @@ footer nav a { color: var(--muted); }
   <h2 style="margin-top:14px">Before you enquire</h2>
   <div class="faq">
     <details><summary>What services do you offer?</summary><p>Cloud services, network engineering, help desk, field technician work and IT solution services, plus the training academy.</p></details>
-    <details><summary>Can I see examples of your work?</summary><p>Yes. Our projects are public on GitHub, with the code and the incident notes. See the Selected work section.</p></details>
+    <details><summary>Can you share examples or references?</summary><p>Tell us about your situation and we will explain how we would approach it. We can share relevant experience on request.</p></details>
     <details><summary>How do I request a service?</summary><p>Choose the service in the form below and tell us what you need. We reply by email with the next steps.</p></details>
     <details><summary>What does it cost?</summary><p>It depends on the scope of the work. We share a clear figure once we understand what you need.</p></details>
     <details><summary>How do I join the academy?</summary><p>Choose the academy in the form below. We reply with the fees, the batch details and the next steps for the 9 November cohort.</p></details>
