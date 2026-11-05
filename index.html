@@ -12,8 +12,14 @@
 <meta property="og:title" content="CloudForge Global | Cloud, network and IT services">
 <meta property="og:description" content="CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services, plus a six-month cloud and DevOps training academy.">
 <meta property="og:url" content="https://cloudforgeglobal.com/">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23131c26'/%3E%3Cpath d='M8 22h16M11 22v-4h10v4M13 18v-3h6v3' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M16 5l1.8 3.6L16 12l-1.8-3.4z' fill='%23ff7a3d'/%3E%3C/svg%3E">
+<meta property="og:image" content="https://cloudforgeglobal.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CloudForge Global Academy logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cloudforgeglobal.com/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -26,6 +32,8 @@
    "@id": "https://cloudforgeglobal.com/#business",
    "name": "CloudForge Global",
    "url": "https://cloudforgeglobal.com/",
+   "logo": "https://cloudforgeglobal.com/apple-touch-icon.png",
+   "image": "https://cloudforgeglobal.com/og-image.png",
    "description": "CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services, plus a six-month cloud and DevOps training academy.",
    "email": "info@cloudforgeglobal.com",
    "areaServed": "Worldwide",
@@ -146,6 +154,7 @@ section { padding-block: clamp(48px, 8vw, 96px); }
 header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 700 1.2rem/1 var(--display); letter-spacing: -0.02em; }
 .brand svg { width: 30px; height: 30px; flex: none; }
+.brand .mark { width: 36px; height: 36px; flex: none; border-radius: 9px; }
 nav.links { display: flex; gap: 22px; font-size: 0.95rem; }
 nav.links a { text-decoration: none; color: var(--muted); padding-bottom: 3px; background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 2px no-repeat; transition: background-size 0.25s ease, color 0.2s ease; }
 nav.links a:hover { color: var(--ink); background-size: 100% 2px; }
@@ -268,6 +277,16 @@ footer nav a { color: var(--muted); }
   .rv { transform: none; }
 }
 
+.lockup { margin-top: 32px; }
+.lockup img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+.lockup .on-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lockup .on-light { display: none; }
+  :root:not([data-theme="light"]) .lockup .on-dark { display: block; }
+}
+:root[data-theme="dark"] .lockup .on-light { display: none; }
+:root[data-theme="dark"] .lockup .on-dark { display: block; }
+
 @media (max-width: 420px) {
   .head-actions .btn.primary { display: none; }
 }
@@ -289,7 +308,7 @@ footer nav a { color: var(--muted); }
 <div class="wrap">
 <header class="top">
   <a class="brand" href="#top" aria-label="CloudForge Global home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 21h16M11 21v-4h10v4M13 17v-3h6v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M16 5l1.8 3.6L16 12l-1.8-3.4z" fill="var(--accent)"/></svg>
+    <img class="mark" src="/logo-mark.png" alt="" width="36" height="36">
     <span>CloudForge Global</span>
   </a>
   <nav class="links" aria-label="Sections">
@@ -427,6 +446,10 @@ footer nav a { color: var(--muted); }
   <p class="kicker">CloudForge Academy</p>
   <h2 style="margin-top:14px">Train for a cloud career with a working engineer</h2>
   <p class="lede" style="margin-top:14px">A six-month program covering networking, AWS, DevOps and ML/AI, led by a senior developer and senior DevSecOps engineer. You practise on real systems, so you can explain your work in an interview.</p>
+  <div class="lockup">
+    <img class="on-light" src="/logo-light.webp" width="1200" height="420" alt="CloudForge Global Academy. Your Global Technology Career Starts Here." loading="lazy">
+    <img class="on-dark" src="/logo-dark.webp" width="1200" height="420" alt="CloudForge Global Academy. Your Global Technology Career Starts Here." loading="lazy">
+  </div>
 
   <div class="path">
     <div class="stage"><div class="bar"></div><p class="when">Months 1 and 2</p><h3>Foundations</h3><p>Networking from IP addressing and DNS to routing, plus Linux, Git and scripting. The base everything else sits on.</p></div>
