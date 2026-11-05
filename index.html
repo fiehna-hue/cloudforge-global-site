@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CloudForge Global | Cloud, network and IT services</title>
+<meta name="description" content="CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services, plus a six-month cloud and DevOps training academy.">
+<link rel="canonical" href="https://cloudforgeglobal.com/">
+<meta name="theme-color" content="#131c26">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CloudForge Global">
+<meta property="og:title" content="CloudForge Global | Cloud, network and IT services">
+<meta property="og:description" content="CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services, plus a six-month cloud and DevOps training academy.">
+<meta property="og:url" content="https://cloudforgeglobal.com/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23131c26'/%3E%3Cpath d='M8 22h16M11 22v-4h10v4M13 18v-3h6v3' fill='none' stroke='%23fff' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3E%3Cpath d='M16 5l1.8 3.6L16 12l-1.8-3.4z' fill='%23ff7a3d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://cloudforgeglobal.com/#business",
+   "name": "CloudForge Global",
+   "url": "https://cloudforgeglobal.com/",
+   "description": "CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services, plus a six-month cloud and DevOps training academy.",
+   "email": "academycloudforge@gmail.com",
+   "areaServed": "Worldwide",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "IT services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Cloud services"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Network engineering"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Help desk"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Field technician"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "IT solution services"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "EducationalOrganization",
+   "@id": "https://cloudforgeglobal.com/#academy",
+   "name": "CloudForge Global Academy",
+   "url": "https://cloudforgeglobal.com/#academy",
+   "parentOrganization": {
+    "@id": "https://cloudforgeglobal.com/#business"
+   },
+   "email": "academycloudforge@gmail.com",
+   "description": "A six-month training program in networking, AWS, DevOps and ML/AI."
+  }
+ ]
+}
+</script>
+<style>
+/* Layout concept: a forged bar of stock that heats from steel to ember marks every sequence on the page; everything else stays quiet. */
+:root {
+  --bg: #edf0f2;
+  --surface: #f8fafb;
+  --ink: #131c26;
+  --muted: #4a5866;
+  --line: #cbd3da;
+  --accent: #c8431a;
+  --on-accent: #ffffff;
+  --h1: #4f6b82;
+  --h2: #8c6f73;
+  --h3: #c0573a;
+  --h4: #e0701f;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e151d; --surface: #151f2a; --ink: #e8edf1; --muted: #9aa8b5; --line: #263443;
+    --accent: #ff7a3d; --on-accent: #1b0f08;
+    --h1: #6f8ca5; --h2: #a58b90; --h3: #e07a4f; --h4: #ffa03d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e151d; --surface: #151f2a; --ink: #e8edf1; --muted: #9aa8b5; --line: #263443;
+  --accent: #ff7a3d; --on-accent: #1b0f08;
+  --h1: #6f8ca5; --h2: #a58b90; --h3: #e07a4f; --h4: #ffa03d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 400 16px/1.6 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.08; text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.7rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 650; letter-spacing: -0.01em; }
+p { margin: 0; }
+.kicker { font: 500 0.78rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+section { padding-block: clamp(48px, 8vw, 96px); }
+.lede { color: var(--muted); font-size: 1.1rem; max-width: 62ch; }
+.fine { margin-top: 18px; color: var(--muted); font-size: 0.9rem; max-width: 70ch; }
+
+/* announcement + header */
+.notice { background: var(--ink); color: var(--bg); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); font-size: 0.92rem; }
+.notice .wrap { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; justify-content: space-between; }
+.notice strong { font-weight: 600; }
+.notice a { color: var(--bg); text-underline-offset: 3px; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 700 1.2rem/1 var(--display); letter-spacing: -0.02em; }
+.brand svg { width: 30px; height: 30px; flex: none; }
+nav.links { display: flex; gap: 22px; font-size: 0.95rem; }
+nav.links a { text-decoration: none; color: var(--muted); padding-bottom: 3px; background: linear-gradient(var(--accent), var(--accent)) left bottom / 0 2px no-repeat; transition: background-size 0.25s ease, color 0.2s ease; }
+nav.links a:hover { color: var(--ink); background-size: 100% 2px; }
+.head-actions { display: flex; align-items: center; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 20px; border-radius: 8px; font: 600 0.98rem/1 var(--body); text-decoration: none; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; transition: transform 0.2s ease, background 0.2s ease, filter 0.2s ease; }
+.btn:hover { background: var(--surface); transform: translateY(-2px); }
+.btn:active { transform: none; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover { background: var(--accent); filter: brightness(1.06); }
+.icon-btn { width: 44px; padding: 0; }
+
+/* hero */
+.hero { padding-top: clamp(32px, 6vw, 72px); }
+.hero h1 { font-size: clamp(2.3rem, 6.2vw, 4.6rem); font-weight: 750; max-width: 17ch; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .lede { margin-top: 22px; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.facts { margin: 44px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facts > div { padding: 18px 18px 18px 0; min-width: 0; }
+.facts dt { font: 500 0.74rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 8px 0 0; font: 700 1.6rem/1.1 var(--display); letter-spacing: -0.02em; }
+
+/* services */
+.svc-grid { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; }
+.svc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.ico { width: 46px; height: 46px; border: 1.5px solid var(--ink); border-radius: 10px; display: grid; place-items: center; color: var(--accent); }
+.ico svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.svc p { color: var(--muted); font-size: 0.95rem; }
+.svc ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.svc li { padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; color: var(--muted); }
+.more { margin-top: auto; padding-top: 6px; font-weight: 600; text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+.more:hover { color: var(--accent); }
+
+/* sequences (process and program) */
+.path { margin-top: clamp(36px, 6vw, 60px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 20px; }
+.stage { min-width: 0; }
+.stage .bar { height: 14px; background: var(--c); }
+.stage:first-child .bar { border-radius: 7px 0 0 7px; }
+.stage:last-child .bar { border-radius: 0 7px 7px 0; }
+.stage .when { margin-top: 14px; font: 500 0.74rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.stage h3 { margin-top: 8px; }
+.stage p { margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+.stage:nth-child(1) { --c: var(--h1); } .stage:nth-child(2) { --c: var(--h2); }
+.stage:nth-child(3) { --c: var(--h3); } .stage:nth-child(4) { --c: var(--h4); }
+
+/* academy */
+.tracks-grid { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.track { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.track p { color: var(--muted); font-size: 0.95rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+.tags span { font: 500 0.74rem/1 var(--mono); padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); transition: color 0.2s ease, border-color 0.2s ease; }
+.track:hover .tags span { border-color: var(--accent); color: var(--ink); }
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 64px); }
+.ways { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.way { padding: 20px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.way p { color: var(--muted); }
+.roles { margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.role { border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; background: var(--surface); font-family: var(--display); font-weight: 600; font-size: 1.08rem; min-width: 0; }
+.subhead { margin-top: clamp(48px, 7vw, 80px); }
+
+/* cohort card */
+.cohort { position: relative; overflow: hidden; background: var(--ink); color: var(--bg); border-radius: 16px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(24px, 4vw, 48px); margin-top: clamp(48px, 7vw, 80px); }
+.cohort::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--h1), var(--h2), var(--h3), var(--h4), var(--h1)); background-size: 200% 100%; animation: drift 6s linear infinite; }
+.cohort .kicker { color: color-mix(in srgb, var(--bg) 65%, transparent); }
+.cohort h2 { margin-top: 12px; }
+.cohort .lede { color: color-mix(in srgb, var(--bg) 78%, transparent); margin-top: 14px; }
+.cohort details { margin-top: 22px; border-top: 1px solid color-mix(in srgb, var(--bg) 25%, transparent); padding-top: 14px; }
+.cohort summary { cursor: pointer; font-weight: 600; }
+.cohort details ul { margin: 12px 0 0; padding-left: 20px; color: color-mix(in srgb, var(--bg) 82%, transparent); }
+.cohort .btn { margin-top: 24px; }
+.cohort .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.teacher { border-left: 3px solid var(--accent); padding-left: 22px; align-self: center; }
+.teacher h3 { margin-top: 10px; color: var(--bg); }
+.teacher p { margin-top: 10px; color: color-mix(in srgb, var(--bg) 78%, transparent); font-size: 0.97rem; }
+
+/* faq */
+.faq { margin-top: 28px; border-top: 1px solid var(--line); max-width: 820px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.faq summary { cursor: pointer; font: 600 1.08rem/1.4 var(--display); }
+.faq p { margin-top: 10px; color: var(--muted); }
+
+/* enquiry */
+.enquire { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 64px); }
+.mail-line { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.mail-line code { font: 500 1rem/1 var(--mono); padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; user-select: all; overflow-wrap: anywhere; }
+form { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(20px, 3vw, 30px); }
+label { display: grid; gap: 6px; font-weight: 600; font-size: 0.92rem; }
+input, select, textarea { font: 400 1rem/1.4 var(--body); color: var(--ink); background: var(--bg); border: 1.5px solid var(--line); border-radius: 8px; padding: 11px 12px; width: 100%; }
+textarea { min-height: 96px; resize: vertical; }
+.draft { display: none; gap: 10px; }
+.draft.show { display: grid; }
+.draft pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 400 0.9rem/1.5 var(--mono); background: var(--bg); border: 1px dashed var(--line); border-radius: 8px; padding: 14px; }
+.draft .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.status { font-size: 0.9rem; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); padding-block: 36px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; color: var(--muted); font-size: 0.92rem; }
+footer a { text-underline-offset: 3px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+footer nav a { color: var(--muted); }
+
+/* motion */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes drift { from { background-position: 0 0; } to { background-position: 200% 0; } }
+@keyframes lift { from { transform: translateY(18px); } to { transform: none; } }
+.hero .kicker, .hero h1, .hero .lede, .hero .cta, .facts { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.hero h1 { animation-delay: 0.08s; } .hero .lede { animation-delay: 0.18s; } .hero .cta { animation-delay: 0.28s; } .facts { animation-delay: 0.38s; }
+.stage .bar { transform-origin: left; transition: filter 0.25s ease; animation: grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.stage:nth-child(2) .bar { animation-delay: 0.2s; } .stage:nth-child(3) .bar { animation-delay: 0.4s; } .stage:nth-child(4) .bar { animation-delay: 0.6s; }
+.stage:hover .bar { filter: brightness(1.18); }
+.brand svg path:last-child { animation: pulse 2.8s ease-in-out infinite; }
+.rv { transform: translateY(18px); }
+.rv.in { transform: none; animation: lift 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms) backwards; }
+.svc, .track, .role { transition: transform 0.25s ease, border-color 0.25s ease; }
+.svc:hover, .track:hover, .role:hover { transform: translateY(-4px); border-color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .rv { transform: none; }
+}
+
+@media (max-width: 860px) {
+  nav.links { display: none; }
+  .path { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .stage .bar { border-radius: 7px !important; }
+  .split, .enquire, .cohort { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="notice"><div class="wrap">
+  <span><strong>Services open for enquiries.</strong> Academy: next cohort starts Monday 9 November.</span>
+  <a href="#enquire">Enquire</a>
+</div></div>
+
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#top" aria-label="CloudForge Global home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 21h16M11 21v-4h10v4M13 17v-3h6v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M16 5l1.8 3.6L16 12l-1.8-3.4z" fill="var(--accent)"/></svg>
+    <span>CloudForge Global</span>
+  </a>
+  <nav class="links" aria-label="Sections">
+    <a href="#services">Services</a><a href="#process">How we work</a><a href="#work">Work</a><a href="#academy">Academy</a><a href="#faq">FAQ</a><a href="#enquire">Contact</a>
+  </nav>
+  <div class="head-actions">
+    <button class="btn icon-btn" id="theme" type="button" aria-label="Switch colour theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
+    <a class="btn primary" href="#enquire">Request a service</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <p class="kicker">Cloud, network and IT services, and training</p>
+  <h1>Cloud, network and IT services from engineers who <em>do the work</em>.</h1>
+  <p class="lede">CloudForge Global provides cloud, network engineering, help desk, field technician and IT solution services for businesses and individuals. Through CloudForge Academy we also train the next generation of cloud and DevOps engineers.</p>
+  <div class="cta">
+    <a class="btn primary" href="#enquire">Request a service</a>
+    <a class="btn" href="#academy">Explore the academy</a>
+  </div>
+  <dl class="facts">
+    <div><dt>Services</dt><dd>6</dd></div>
+    <div><dt>Training tracks</dt><dd>4</dd></div>
+    <div><dt>Next cohort</dt><dd>9 Nov 2026</dd></div>
+    <div><dt>Contact</dt><dd>By email</dd></div>
+  </dl>
+</section>
+
+<section id="services">
+  <p class="kicker">What we do</p>
+  <h2 style="margin-top:14px">Six services, one team</h2>
+  <p class="lede" style="margin-top:14px">Use one service, or combine them. The same engineers plan, build and support the work.</p>
+  <div class="svc-grid">
+    <article class="svc">
+      <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-7.96A5.5 5.5 0 0 1 17 8.6 4.7 4.7 0 0 1 17.5 18z"/></svg></div>
+      <h3>Cloud services</h3>
+      <p>AWS environments that are secure, documented and built so costs stay visible.</p>
+      <ul><li>Account setup, identity and access control</li><li>Networks, servers, storage and databases</li><li>Terraform and automated deployment pipelines</li><li>Monitoring, backups and cost alerts</li></ul>
+      <a class="more" href="#enquire" data-service="Cloud services">Ask about this service <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    <article class="svc">
+      <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6 17M12 11.5L18 17"/></svg></div>
+      <h3>Network engineering</h3>
+      <p>Networks that are planned, documented and secured, from the office switch to the cloud.</p>
+      <ul><li>LAN, WAN and Wi-Fi design and troubleshooting</li><li>Routing, switching, VLANs and IP plans</li><li>Firewalls and VPN between sites and the cloud</li><li>AWS networking: VPCs, subnets, connectivity</li></ul>
+      <a class="more" href="#enquire" data-service="Network engineering services">Ask about this service <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    <article class="svc">
+      <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></div>
+      <h3>Help desk</h3>
+      <p>Responsive first-line support that solves common problems fast and escalates the hard ones with the right details.</p>
+      <ul><li>User accounts, access and password support</li><li>Microsoft 365 and device support</li><li>Ticket handling and clear escalation</li><li>Remote troubleshooting and guidance</li></ul>
+      <a class="more" href="#enquire" data-service="Help desk services">Ask about this service <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    <article class="svc">
+      <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v2M3 13h18"/></svg></div>
+      <h3>Field technician</h3>
+      <p>On-site technical work done properly, with equipment connected, working and documented before we leave.</p>
+      <ul><li>Workstation, laptop and peripheral setup</li><li>Cabling, racks and network equipment</li><li>Site visits, break-fix and hardware replacement</li><li>Device rollouts and asset records</li></ul>
+      <a class="more" href="#enquire" data-service="Field technician services">Ask about this service <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    <article class="svc">
+      <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12.5l9 5 9-5M3 17l9 5 9-5"/></svg></div>
+      <h3>IT solution services</h3>
+      <p>Planning and delivering IT projects from first conversation to documented handover.</p>
+      <ul><li>Assessment of your current setup</li><li>Cloud migration and automation</li><li>Security hardening</li><li>Documentation and handover</li></ul>
+      <a class="more" href="#enquire" data-service="IT solution services">Ask about this service <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    <article class="svc">
+      <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5M22 9v5"/></svg></div>
+      <h3>Training academy</h3>
+      <p>A six-month program in networking, AWS, DevOps and ML/AI, led by a senior engineer.</p>
+      <ul><li>Next cohort starts 9 November</li><li>Four skill tracks</li><li>Hands-on labs and a capstone project</li><li>Interview preparation</li></ul>
+      <a class="more" href="#academy">See the academy <span aria-hidden="true">&rarr;</span></a>
+    </article>
+  </div>
+</section>
+
+<section id="process">
+  <p class="kicker">How we work</p>
+  <h2 style="margin-top:14px">The same four steps on every job</h2>
+  <div class="path">
+    <div class="stage"><div class="bar"></div><p class="when">Step 1</p><h3>Listen</h3><p>We learn what you need, what you already have and what the work has to achieve.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Step 2</p><h3>Plan</h3><p>A clear scope and approach, agreed with you before any work starts.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Step 3</p><h3>Deliver</h3><p>The work is done and tested against what we agreed.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Step 4</p><h3>Hand over</h3><p>Documentation and a walkthrough, so your team can run it without us.</p></div>
+  </div>
+</section>
+
+<section id="expect">
+  <div class="split">
+    <div>
+      <p class="kicker">What you can expect</p>
+      <h2 style="margin-top:14px">Clear scope, plain language, work you keep</h2>
+    </div>
+    <div class="ways">
+      <div class="way"><h3>A written scope before work starts</h3><p>You know what is included, what is not, and what happens next.</p></div>
+      <div class="way"><h3>Plain-English updates</h3><p>We explain what we found and what we did without jargon.</p></div>
+      <div class="way"><h3>Documentation you keep</h3><p>Diagrams, settings and notes are handed over, so you are never locked in to us.</p></div>
+      <div class="way"><h3>Honest advice</h3><p>If a simpler or cheaper option fits, we will say so, even when it means less work for us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <p class="kicker">Selected work</p>
+  <h2 style="margin-top:14px">Built, broken, fixed and documented</h2>
+  <p class="lede" style="margin-top:14px">Our projects are public, so you can read the code and the incident notes before you hire us.</p>
+  <div class="tracks-grid">
+    <article class="track"><h3>Self-hosted collaboration platform</h3><p>A file collaboration service on AWS: containers, a managed database and shared storage behind a load balancer, all built with Terraform and a pull-request pipeline. Resilience proven by replacing the running container, with five incidents written up.</p><a class="more" href="https://github.com/fiehna-hue/collab-platform-aws" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
+    <article class="track"><h3>Cloud platform as code</h3><p>Reusable Terraform modules for networking, databases and services, deployed by a pipeline that plans on every pull request and applies on merge, with no stored AWS keys.</p><a class="more" href="https://github.com/fiehna-hue/aws-platform-as-code" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
+    <article class="track"><h3>Container hardening</h3><p>A Docker stack taken from a naive image to a hardened four-service setup: rebuilds from 11.8 to 1.8 seconds, security findings from 471 to 45, four documented incidents and a CI pipeline that tests, scans and publishes.</p><a class="more" href="https://github.com/fiehna-hue/docker-deep-dive" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
+    <article class="track"><h3>AWS cost guardrails</h3><p>A read-only scanner that finds billable AWS resources across every region, a Terraform budget module with alerts, and a daily scheduled scan.</p><a class="more" href="https://github.com/fiehna-hue/aws-cost-guardrails" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">&rarr;</span></a></article>
+  </div>
+
+  <div class="subhead">
+    <p class="kicker">Technology we work with</p>
+    <div class="tags" style="margin-top:16px"><span>AWS</span><span>Terraform</span><span>Docker</span><span>GitHub Actions</span><span>Linux</span><span>Windows</span><span>Microsoft 365</span><span>Active Directory</span><span>Entra ID</span><span>Intune</span><span>ServiceNow</span><span>VPN</span><span>VPC</span></div>
+  </div>
+</section>
+
+<section id="clients">
+  <p class="kicker">Who we work with</p>
+  <h2 style="margin-top:14px">Support that fits your size</h2>
+  <div class="roles">
+    <div class="role">Small businesses</div>
+    <div class="role">Growing teams</div>
+    <div class="role">Organisations moving to the cloud</div>
+    <div class="role">Individuals and students</div>
+  </div>
+  <p class="fine">Tell us what you have today and what you need next. We will tell you honestly which service fits.</p>
+</section>
+
+<section id="academy">
+  <p class="kicker">CloudForge Academy</p>
+  <h2 style="margin-top:14px">Train for a cloud career with a working engineer</h2>
+  <p class="lede" style="margin-top:14px">A six-month program covering networking, AWS, DevOps and ML/AI, led by a senior developer and senior DevSecOps engineer. You practise on real systems, so you can explain your work in an interview.</p>
+
+  <div class="path">
+    <div class="stage"><div class="bar"></div><p class="when">Months 1 and 2</p><h3>Foundations</h3><p>Networking from IP addressing and DNS to routing, plus Linux, Git and scripting. The base everything else sits on.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Months 3 and 4</p><h3>AWS</h3><p>Identity, networks, servers, storage, databases, load balancing and monitoring, built and secured by hand.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 5</p><h3>DevOps</h3><p>Containers, infrastructure as code and pipelines, with security checks built into every change.</p></div>
+    <div class="stage"><div class="bar"></div><p class="when">Month 6</p><h3>ML/AI and capstone</h3><p>Machine learning and AI services on the cloud, then a capstone project and interview preparation.</p></div>
+  </div>
+
+  <div class="tracks-grid">
+    <article class="track"><h3>Networking</h3><p>How traffic actually moves, so cloud networks stop being guesswork.</p><div class="tags"><span>TCP/IP</span><span>DNS</span><span>Routing</span><span>VPC</span><span>VPN</span></div></article>
+    <article class="track"><h3>AWS</h3><p>The core services employers expect you to run, secure and troubleshoot.</p><div class="tags"><span>IAM</span><span>EC2</span><span>S3</span><span>RDS</span><span>CloudWatch</span></div></article>
+    <article class="track"><h3>DevOps</h3><p>Automate infrastructure and delivery, with security part of the pipeline.</p><div class="tags"><span>Linux</span><span>Git</span><span>Docker</span><span>Terraform</span><span>CI/CD</span></div></article>
+    <article class="track"><h3>ML/AI</h3><p>Move from notebooks to working services on the cloud.</p><div class="tags"><span>Python</span><span>Data pipelines</span><span>Model deployment</span><span>AI services</span></div></article>
+  </div>
+
+  <div class="cohort" id="cohort">
+    <div>
+      <p class="kicker">Next cohort</p>
+      <h2>Starts Monday 9 November</h2>
+      <p class="lede">The full six-month program, from foundations to a capstone project.</p>
+      <details>
+        <summary>What you need to know before enquiring</summary>
+        <ul>
+          <li>Duration: six months.</li>
+          <li>Tracks: networking, AWS, DevOps and ML/AI.</li>
+          <li>Session times and fees are shared when you enquire, so we can match your time zone.</li>
+        </ul>
+      </details>
+      <a class="btn primary" href="#enquire" data-service="Training: the full six-month program">Enquire about the academy</a>
+    </div>
+    <aside class="teacher">
+      <p class="kicker">Lead instructor</p>
+      <h3>22+ years in the field</h3>
+      <p>A senior developer and senior DevSecOps engineer who teaches what is used on real projects today.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="faq">
+  <p class="kicker">Questions</p>
+  <h2 style="margin-top:14px">Before you enquire</h2>
+  <div class="faq">
+    <details><summary>What services do you offer?</summary><p>Cloud services, network engineering, help desk, field technician work and IT solution services, plus the training academy.</p></details>
+    <details><summary>Can I see examples of your work?</summary><p>Yes. Our projects are public on GitHub, with the code and the incident notes. See the Selected work section.</p></details>
+    <details><summary>How do I request a service?</summary><p>Choose the service in the form below and tell us what you need. We reply by email with the next steps.</p></details>
+    <details><summary>What does it cost?</summary><p>It depends on the scope of the work. We share a clear figure once we understand what you need.</p></details>
+    <details><summary>How do I join the academy?</summary><p>Choose the academy in the form below. We reply with the schedule, the fees and the next steps for the 9 November cohort.</p></details>
+    <details><summary>Which time zone are the academy sessions in?</summary><p>We are a global academy. Tell us where you are in your enquiry and we will confirm the session times.</p></details>
+    <details><summary>Who teaches the academy?</summary><p>A senior developer and senior DevSecOps engineer with more than 22 years of experience. The academy is led by its founder.</p></details>
+    <details><summary>Do I need experience to join the academy?</summary><p>Tell us your background in your enquiry. The first two months build the foundations, and we will tell you honestly whether the program fits.</p></details>
+  </div>
+</section>
+
+<section id="enquire">
+  <div class="enquire">
+    <div>
+      <p class="kicker">Contact</p>
+      <h2 style="margin-top:14px">Tell us what you need</h2>
+      <p class="lede" style="margin-top:14px">We reply by email. Write your enquiry here, then send it to this address.</p>
+      <div class="mail-line">
+        <code id="addr">academycloudforge@gmail.com</code>
+        <button class="btn" id="copyaddr" type="button">Copy address</button>
+      </div>
+    </div>
+    <form id="enq" novalidate>
+      <label for="name">Your name<input id="name" autocomplete="name" placeholder="Full name"></label>
+      <label for="track">What are you interested in?
+        <select id="track">
+          <option>Cloud services</option><option>Network engineering services</option><option>Help desk services</option><option>Field technician services</option><option>IT solution services</option><option>Training: the full six-month program</option><option>Training: one track only</option>
+        </select>
+      </label>
+      <label for="msg">Tell us about your need and your location<textarea id="msg" placeholder="What you need done, or your background if you are asking about training, and the country or time zone you are in"></textarea></label>
+      <button class="btn primary" type="submit">Prepare my enquiry</button>
+      <div class="draft" id="draft" aria-live="polite">
+        <pre id="draftText"></pre>
+        <div class="row">
+          <button class="btn" id="copydraft" type="button">Copy text</button>
+          <a class="btn primary" id="mailto" href="#">Open in email app</a>
+          <span class="status" id="status"></span>
+        </div>
+        <p class="status">Paste the text into an email to the address above. The email app button may not work in every browser.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>&copy; 2026 CloudForge Global<br>Cloud, network and IT services, and training</span>
+  <nav aria-label="Footer"><a href="#services">Services</a><a href="#process">How we work</a><a href="#academy">Academy</a><a href="#faq">FAQ</a></nav>
+  <span>Contact<br><a href="#enquire">academycloudforge@gmail.com</a></span>
+</footer>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById("theme");
+  try { var saved = localStorage.getItem("cf-theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  btn.addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") === "dark" ||
+      (!root.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("cf-theme", next); } catch (e) {}
+  });
+
+  function copy(text, label) {
+    var status = document.getElementById("status");
+    function done(ok) { status.textContent = ok ? label + " copied." : "Select the text and copy it."; }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+    } else { done(false); }
+  }
+  document.getElementById("copyaddr").addEventListener("click", function () {
+    copy(document.getElementById("addr").textContent, "Address");
+  });
+
+  document.querySelectorAll("[data-service]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var sel = document.getElementById("track");
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text === a.getAttribute("data-service")) { sel.selectedIndex = i; }
+      }
+    });
+  });
+
+  var addr = "academycloudforge@gmail.com";
+  document.getElementById("enq").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("name").value.trim() || "(your name)";
+    var track = document.getElementById("track").value;
+    var msg = document.getElementById("msg").value.trim() || "(your need and your location)";
+    var training = /^Training/.test(track);
+    var subject = training ? "Enquiry: CloudForge Global Academy, 9 November cohort" : "Services enquiry: " + track;
+    var body = "Hello,\n\nMy name is " + name + ". I am interested in: " + track + ".\n\n" + msg + "\n\nPlease send me the details" + (training ? ", the schedule" : "") + " and fees.\n\nThank you,\n" + name;
+    document.getElementById("draftText").textContent = "To: " + addr + "\nSubject: " + subject + "\n\n" + body;
+    document.getElementById("mailto").setAttribute("href", "mailto:" + addr + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body));
+    document.getElementById("draft").classList.add("show");
+  });
+  document.getElementById("copydraft").addEventListener("click", function () {
+    copy(document.getElementById("draftText").textContent, "Enquiry");
+  });
+})();
+</script>
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) return;
+  var els = document.querySelectorAll(".svc, .track, .way, .role, .faq details, .facts > div, .cohort, #enq");
+  els.forEach(function (el, i) { el.classList.add("rv"); el.style.setProperty("--d", (i % 4) * 70 + "ms"); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
