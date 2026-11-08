@@ -320,6 +320,36 @@ footer .f-copy{grid-column:1/-1;margin:8px 0 0;padding-top:18px;border-top:1px s
 <style id="nav-upgrade">html{scroll-padding-top:84px}@media (min-width:821px) and (max-width:1180px){header.top nav.links{gap:4px 12px!important}header.top nav.links a{font-size:.86rem}header.top .head-actions .btn.primary{padding-inline:14px}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Azure Administration and Solution Architecture Foundations track","description":"Live online Azure training: Entra ID, virtual networks, compute, storage, governance, introductory solution architecture and repeatable deployments.","provider":{"@type":"EducationalOrganization","name":"CloudForge Global Academy","url":"https://cloudforgeglobal.com/"},"url":"https://cloudforgeglobal.com/courses/azure-administration-solution-architecture.html","courseMode":"online"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cloudforgeglobal.com/"},{"@type":"ListItem","position":2,"name":"Academy","item":"https://cloudforgeglobal.com/#academy"},{"@type":"ListItem","position":3,"name":"Azure Administration and Solution Architecture Foundations","item":"https://cloudforgeglobal.com/courses/azure-administration-solution-architecture.html"}]}</script>
+<style id="menu-upgrade">
+header.top{position:relative}
+.article-anchor,.svc[id]{scroll-margin-top:90px}
+nav.links{align-items:center}
+.dd{position:relative}
+.dd-btn{font:inherit;font-size:inherit;color:var(--muted);background:none;border:0;padding:0 0 3px;cursor:pointer;display:inline-flex;gap:5px;align-items:center}
+.dd-btn:hover,.dd.open .dd-btn,.dd:focus-within .dd-btn{color:var(--ink)}
+.dd-menu{position:absolute;top:100%;left:-14px;padding-top:12px;min-width:270px;display:none;z-index:80}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu,.dd.open .dd-menu{display:block}
+.dd-box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(19,28,38,.18);display:flex;flex-direction:column}
+nav.links .dd-box a{background:none!important;color:var(--ink);padding:9px 12px;border-radius:8px;font-size:.92rem;white-space:nowrap}
+nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)!important;color:var(--accent)}
+.dd-sep{height:1px;background:var(--line);margin:6px 4px}
+#menu-btn{display:none}
+#mobile-menu{display:none}
+@media (max-width:860px){
+  #menu-btn{display:inline-flex}
+  #mobile-menu:not([hidden]){display:flex;flex-direction:column;gap:2px;position:absolute;top:100%;left:0;right:0;z-index:90;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:0 18px 40px rgba(19,28,38,.2);max-height:75vh;overflow:auto}
+  #mobile-menu a:not(.btn),#mobile-menu summary{display:block;padding:12px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:600;cursor:pointer}
+  #mobile-menu details a:not(.btn){font-weight:500;color:var(--muted);padding-left:26px}
+  #mobile-menu summary{list-style:none;display:flex!important;justify-content:space-between}
+  #mobile-menu summary::-webkit-details-marker{display:none}
+  #mobile-menu summary::after{content:"+";color:var(--muted);font-weight:400}
+  #mobile-menu details[open] summary::after{content:"\2212"}
+  #mobile-menu .dd-sep{margin:4px 12px}
+  #mobile-menu .btn{margin-top:8px;justify-content:center;text-align:center}
+}
+@media (min-width:861px){#mobile-menu{display:none!important}}
+@media (max-width:420px){#mobile-menu .btn.primary{display:inline-flex}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -333,14 +363,12 @@ footer .f-copy{grid-column:1/-1;margin:8px 0 0;padding-top:18px;border-top:1px s
     <img class="mark" src="/logo-mark.png" alt="" width="36" height="36">
     <span>CloudForge Global</span>
   </a>
-  <nav class="links" aria-label="Sections">
-    <a href="/#services">Services</a><a href="/#process">How we work</a><a href="/#work">Typical jobs</a><a href="/#cyber">Cybersecurity</a><a href="/#academy">Academy</a><a href="/#faq">FAQ</a><a href="/#enquire">Contact</a>
-  </nav>
+  <nav class="links" aria-label="Main"><div class="dd"><button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">IT services <span aria-hidden="true">&#9662;</span></button><div class="dd-menu"><div class="dd-box"><a href="/#svc-cloud">Cloud services</a><a href="/#svc-network">Network engineering</a><a href="/#svc-helpdesk">Help desk</a><a href="/#svc-field">Field technician</a><a href="/#svc-solutions">IT solution services</a><a href="/#cyber">Cybersecurity</a><span class="dd-sep"></span><a href="/#work">Typical jobs</a><a href="/#engage">Ways to work with us</a><a href="/#services">All services</a></div></div></div><div class="dd"><button class="dd-btn" type="button" aria-expanded="false" aria-haspopup="true">Academy <span aria-hidden="true">&#9662;</span></button><div class="dd-menu"><div class="dd-box"><a href="/#academy">Programme overview</a><span class="dd-sep"></span><a href="/courses/aws-solutions-architect-associate.html">AWS Solutions Architect Associate</a><a href="/courses/devsecops-automation-delivery-security.html">DevSecOps: delivery and security</a><a href="/courses/azure-administration-solution-architecture.html">Azure administration</a><a href="/courses/aws-cloud-security-devsecops.html">AWS cloud security</a><a href="/courses/ai-devops-aiops-mlops-foundations.html">AI and DevOps</a><span class="dd-sep"></span><a href="/#cohort">Next cohort</a><a href="/CloudForge-Global-Academy-Programme-Guide.pdf">Programme guide (PDF)</a></div></div></div><a href="/#process">How we work</a><a href="/#faq">FAQ</a><a href="/#enquire">Contact</a></nav>
   <div class="head-actions">
     <button class="btn icon-btn" id="theme" type="button" aria-label="Switch colour theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
-    <a class="btn primary" href="/#enquire">Request a service</a>
+    <a class="btn primary" href="/#enquire">Request a service</a><button class="btn icon-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-</header>
+<div id="mobile-menu" hidden><details><summary>IT services</summary><a href="/#svc-cloud">Cloud services</a><a href="/#svc-network">Network engineering</a><a href="/#svc-helpdesk">Help desk</a><a href="/#svc-field">Field technician</a><a href="/#svc-solutions">IT solution services</a><a href="/#cyber">Cybersecurity</a><span class="dd-sep"></span><a href="/#work">Typical jobs</a><a href="/#engage">Ways to work with us</a><a href="/#services">All services</a></details><details><summary>Academy</summary><a href="/#academy">Programme overview</a><span class="dd-sep"></span><a href="/courses/aws-solutions-architect-associate.html">AWS Solutions Architect Associate</a><a href="/courses/devsecops-automation-delivery-security.html">DevSecOps: delivery and security</a><a href="/courses/azure-administration-solution-architecture.html">Azure administration</a><a href="/courses/aws-cloud-security-devsecops.html">AWS cloud security</a><a href="/courses/ai-devops-aiops-mlops-foundations.html">AI and DevOps</a><span class="dd-sep"></span><a href="/#cohort">Next cohort</a><a href="/CloudForge-Global-Academy-Programme-Guide.pdf">Programme guide (PDF)</a></details><a href="/#process">How we work</a><a href="/#faq">FAQ</a><a href="/#enquire">Contact</a><a class="btn primary" href="/#enquire">Request a service</a></div></header>
 
 <main id="top">
 <section>
@@ -411,6 +439,36 @@ footer .f-copy{grid-column:1/-1;margin:8px 0 0;padding-top:18px;border-top:1px s
     root.setAttribute("data-theme", next);
     try { localStorage.setItem("cf-theme", next); } catch (e) {}
   });
+})();
+</script>
+<script id="menu-js">
+(function(){
+  var btn=document.getElementById("menu-btn"), panel=document.getElementById("mobile-menu");
+  function closeAll(){
+    document.querySelectorAll(".dd.open").forEach(function(d){d.classList.remove("open");d.querySelector(".dd-btn").setAttribute("aria-expanded","false");});
+    if(panel&&btn){panel.hidden=true;btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-label","Open menu");}
+  }
+  document.querySelectorAll(".dd-btn").forEach(function(b){
+    b.addEventListener("click",function(e){
+      e.stopPropagation();
+      var d=b.parentElement, was=d.classList.contains("open");
+      closeAll();
+      if(!was){d.classList.add("open");b.setAttribute("aria-expanded","true");}
+    });
+  });
+  if(btn&&panel){
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      var open=panel.hidden;
+      closeAll();
+      if(open){panel.hidden=false;btn.setAttribute("aria-expanded","true");btn.setAttribute("aria-label","Close menu");}
+    });
+    panel.addEventListener("click",function(e){ if(e.target.closest("a")) closeAll(); e.stopPropagation(); });
+  }
+  document.addEventListener("click",closeAll);
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeAll(); });
+  document.querySelectorAll(".dd-menu a").forEach(function(a){a.addEventListener("click",closeAll);});
+  addEventListener("resize",closeAll);
 })();
 </script>
 </body>
