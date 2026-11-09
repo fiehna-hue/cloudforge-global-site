@@ -512,8 +512,19 @@ nav.links>a.active{color:var(--ink)}
 @media (max-width:900px){.bp{grid-template-columns:1fr;gap:0}.bp-link{width:2px;height:28px;margin:0 auto;background:repeating-linear-gradient(180deg,var(--line) 0 6px,transparent 6px 11px)}.bp-link::after{width:4px;height:14px;left:-1px;top:0;animation-name:bpdown}@keyframes bpdown{0%{transform:translateY(-14px);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(28px);opacity:0}}}
 @media (prefers-reduced-motion:reduce){.hero::before,.hero::after,.bp-link::after{animation:none}.js-motion .stage .bar{transform:none;transition:none}.js-motion .tags span{opacity:1;transform:none;transition:none}.faq details[open]>p{animation:none}.btn.primary::after{display:none}}
 </style>
+<style id="polish4">
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+input,select,textarea{transition:border-color .2s,box-shadow .2s}
+.js-motion img[loading=lazy]{opacity:0;transition:opacity .7s ease}
+.js-motion img[loading=lazy].ld{opacity:1}
+@media (prefers-reduced-motion:reduce){.js-motion img[loading=lazy]{opacity:1;transition:none}.skip{transition:none}}
+</style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
+
 <div class="notice"><div class="wrap">
   <span><strong>Services open for enquiries.</strong> Academy: next cohort starts Monday 9 November.</span>
   <a href="#enquire">Enquire</a>
@@ -1066,6 +1077,14 @@ nav.links>a.active{color:var(--ink)}
   var tk=false;
   function spy(){var cur=null,y=innerHeight*.4;links.forEach(function(l){var r=l[1].getBoundingClientRect();if(r.top<=y&&r.bottom>y)cur=l[0];});links.forEach(function(l){l[0].classList.toggle("on",l[0]===cur);});tk=false;}
   addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(spy);}},{passive:true});spy();
+})();
+</script>
+<script id="polish4-js">
+(function(){
+  document.querySelectorAll("img[loading=lazy]").forEach(function(im){
+    function ok(){im.classList.add("ld");}
+    if(im.complete&&im.naturalWidth)ok();else{im.addEventListener("load",ok);im.addEventListener("error",ok);}
+  });
 })();
 </script>
 </body>
