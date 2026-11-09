@@ -350,6 +350,26 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
 @media (min-width:861px){#mobile-menu{display:none!important}}
 @media (max-width:420px){#mobile-menu .btn.primary{display:inline-flex}}
 </style>
+<style id="syllabus-css">
+.syl-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:18px 0 14px}
+.syl-bar span{color:var(--muted);font-size:.95rem}
+.syl-bar button{font:inherit;font-size:.9rem;cursor:pointer;background:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.syl-bar button:hover{border-color:var(--accent);color:var(--accent)}
+.mod{border:1px solid var(--line);border-radius:12px;margin-top:10px;background:color-mix(in srgb,var(--bg) 96%,var(--accent))}
+.mod summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:14px 16px}
+.mod summary::-webkit-details-marker{display:none}
+.mod .n{font-weight:700;color:var(--accent);min-width:2ch}
+.mod .t{font-weight:600;flex:1;color:var(--ink)}
+.mod .c{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.mod summary::after{content:"+";color:var(--muted);font-size:1.2rem;line-height:1}
+.mod[open] summary::after{content:"\2212"}
+.mod[open]{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.mod .body{display:grid;gap:18px 28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));padding:2px 18px 18px}
+.mod h4{margin:0 0 8px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mod ul{margin:0;padding-left:18px}
+.mod li{margin:4px 0;line-height:1.45}
+@media (max-width:560px){.mod .c{display:none}.mod summary{padding:13px 14px}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -390,6 +410,27 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
       <div class="way"><h3>Solution architecture</h3><p>An introduction to designing Azure solutions and weighing the trade-offs.</p></div>
       <div class="way"><h3>Repeatable deployments</h3><p>Deploy with ARM templates and Azure DevOps, so environments can be rebuilt the same way.</p></div>
   </div>
+</section>
+
+<section id="syllabus">
+  <p class="kicker">Full syllabus</p>
+  <h2 style="margin-top:14px">14 modules, from first topic to final practice</h2>
+  <p class="lede" style="margin-top:14px">Every module lists what you will be able to do, the topics covered and the hands-on practice. Open a module to see the detail.</p>
+  <div class="syl-bar"><span>101 topics and 37 practice tasks in total</span><span><button type="button" data-syl="open">Expand all</button> <button type="button" data-syl="close">Collapse all</button></span></div>
+  <details class="mod"><summary><span class="n">01</span><span class="t">Azure fundamentals and governance</span><span class="c">3 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Cloud service models and AZ-900 foundation concepts</li><li>Subscriptions, resource groups, Azure Policy, tags and cost budgets</li><li>Microsoft Entra ID, RBAC and identity boundaries</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">02</span><span class="t">Associate-level administration foundations</span><span class="c">3 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Virtual networks, subnets, NSGs, private endpoints and name resolution</li><li>Virtual machines, availability choices, storage accounts and access control</li><li>Azure Monitor, alerts, backup and recovery concepts</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">03</span><span class="t">Automation and delivery</span><span class="c">3 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Azure CLI and PowerShell foundations</li><li>ARM templates and Terraform resource provisioning</li><li>Azure DevOps Boards, Repos, Pipelines and Artifacts; AKS overview</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">04</span><span class="t">Solution design foundations</span><span class="c">3 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Translate workload requirements into compute, data and networking choices</li><li>Compare identity, governance, monitoring and business-continuity designs</li><li>Introductory AZ-305 design concepts; advanced expert preparation is outside this foundation course</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">05</span><span class="t">Azure architecture project</span><span class="c">3 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Plan and deploy a small web workload with network boundaries and monitoring</li><li>Document resource choices, recovery objectives, costs and cleanup</li><li>Review operational tasks and scenario-based design decisions</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">06</span><span class="t">Azure subscriptions and resource governance</span><span class="c">6 topics · 8 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Introduction to Microsoft Azure</li><li>Overview of Course</li><li>Overview of Microsoft Azure</li><li>Cloud Computing Models: IaaS, PaaS, SaaS</li><li>Types of Microsoft Azure Subscriptions</li><li>Manage Azure Resource Groups – Tags, Locks, RBAC, Policies</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Microsoft Azure Account Sign Up</li><li>Walkthrough of Microsoft Azure Services</li><li>Create, Move, Delete Resource Group</li><li>Create Tags</li><li>Configure Locks: Read-only &amp; CanNotDelete</li><li>Create Custom Roles using RBAC</li><li>Assign Users to access Resource</li><li>Create &amp; Deploy Policies</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">07</span><span class="t">Azure App Service and virtual machines</span><span class="c">7 topics · 4 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Working with Web App &amp; Virtual Machines</li><li>Overview of Azure App Service Web App</li><li>Overview of App Service Plans</li><li>Web App Deployment Methods</li><li>Understanding Deployment Slots</li><li>Overview of Virtual Machine</li><li>Virtual Machine Resources</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Create &amp; Deploy Web App – Files Explorer, FTP, Github, Visual Studio</li><li>Create &amp; Deploy Staging Environment for Web App</li><li>Create &amp; Deploy Virtual Machine using Portal – Windows</li><li>Create &amp; Deploy Virtual Machine using PowerShell &amp; CLI - Windows</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">08</span><span class="t">Azure DevOps setup and culture</span><span class="c">7 objectives · 9 topics</span></summary><div class="body"><div><h4>Objectives</h4><ul><li>Understand the concepts and principles of DevOps and how they align with cloud development.</li><li>Learn how to set up and configure Azure DevOps organizations and projects.</li><li>Manage version control using Git and GitHub integrated with Azure DevOps.</li><li>Build and deploy CI/CD pipelines using Azure Pipelines.</li><li>Implement infrastructure as code (IaC) with tools like Terraform and ARM templates.</li><li>Configure Azure Boards for project planning and task tracking.</li><li>Monitor and maintain CI/CD processes to ensure efficient and secure software delivery.</li></ul></div><div><h4>Topics</h4><ul><li>Introduction to Azure DevOps</li><li>What is DevOps?</li><li>Why Culture is Important to DevOps</li><li>Why Automation is Important to DevOps</li><li>Azure DevOps Platform</li><li>DEVOPS tools Required</li><li>Setup Visual studio code</li><li>Setup Extensions on Visual Studio Code</li><li>Setup Azure DevOps account</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">09</span><span class="t">Azure Boards and agile planning</span><span class="c">7 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Azure Boards</li><li>What is boards</li><li>What is Agile and Scrum?</li><li>Creating Teams, Epics and Features</li><li>What are product Backlogs and Task Boards</li><li>How to create queries, Charts and Dashboards</li><li>Creating Custom process and work items</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">10</span><span class="t">Azure Repos and collaborative Git</span><span class="c">12 topics · 5 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Azure Repo</li><li>What is version control?</li><li>What is Git?</li><li>Why Git for your organization?</li><li>Installing Git</li><li>Working with Remote Repositories</li><li>Branching and Merging in Git</li><li>Git workflows</li><li>Git cheat sheet</li><li>What is Azure Repo</li><li>Understanding REST API’s</li><li>Working with Webhooks in Azure Repos</li></ul></div><div><h4>Hands-on practice</h4><ul><li>GIT Installation, Version Control, branching and merging of code.</li><li>Pulling and Pushing repositories from Azure Repo server</li><li>Ignoring certain files</li><li>Difference between Merge and Rebase.</li><li>Creating Development Environments and performing pull requests and approval.</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">11</span><span class="t">Standardised environments and ARM templates</span><span class="c">8 topics · 6 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Deploy and Configure Standardized Environments</li><li>Overview</li><li>Environments in IaaS/PaaS and with Containers</li><li>Introduction to ARM Templates</li><li>Implementing ARM Templates</li><li>Logging, Troubleshooting and Diagnostics</li><li>Provisioning and Configuring Environments with Azure DevTest Labs</li><li>Introduction to Desired State Configuration</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Creating &amp; Deploy ARM Template – Visual Studio Code</li><li>Creating &amp; Deploy ARM Template – Portal</li><li>ARM Template Gallery</li><li>Manage Templates</li><li>ARM Template with PowerShell</li><li>Lab Guide – Authoring ARM Template using Visual Studio</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">12</span><span class="t">Azure build and release pipelines</span><span class="c">17 topics · 7 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Build and Deploy Automatically to Production</li><li>Overview of Build and Deploy</li><li>Automated Builds</li><li>Automated Deployments</li><li>Package Management and Containers</li><li>Overview of Continuous Integration</li><li>Continuous Integration</li><li>Pipelines and Agents</li><li>Continuous Delivery</li><li>Release Pipelines</li><li>Environments and Tasks</li><li>Advanced Delivery</li><li>Overview of Continuous Deployment</li><li>Continuous Deployment</li><li>Advanced Continuous Deployment</li><li>Testing overview and its connection to build/release validation</li><li>ELK log analysis for deployed environments</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Create a Build</li><li>Automated the Deployments</li><li>Create a first Pipeline</li><li>Working with Visual Designer</li><li>Deploy Continuously - Local Git, Template</li><li>Working with staging Environment</li><li>Scaling Apps</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">13</span><span class="t">Azure Artifacts and package feeds</span><span class="c">6 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Azure Artifacts</li><li>Understanding Build and Pipeline Artifacts</li><li>Creating and using a Feed from Azure Artifacts</li><li>Upstream Sources</li><li>Working with views in Feed</li><li>Creating a Package using pipeline</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">14</span><span class="t">Azure containers and AKS</span><span class="c">14 topics · 7 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Azure Container Services</li><li>Source-era ACS with managed Kubernetes (compare with the AKS topics below)</li><li>AKS Features</li><li>Azure Container Eco System</li><li>Azure Container Registry</li><li>Azure Kubernetes Services (AKS)</li><li>Azure Container Instances (ACI)</li><li>ACI Connector for Kubernetes</li><li>ACI - Virtual Kubelet</li><li>Source-era Open Service Broker for Azure (review tooling before practice)</li><li>Release Automation Tools</li><li>Deploying Azure Kubernetes using Helm; source-era Draft example (review tooling before practice)</li><li>Event-based Scripting using source-era Brigade (review tooling before practice)</li><li>Create Dashboard and Visualization using source-era Kashti (review tooling before practice)</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Define your first Kubernetes pod</li><li>Define your first replication controllers pod</li><li>Working with Kubernetes replication controllers</li><li>Working with Kubernetes Services</li><li>Define &amp; Working with Deployments</li><li>Define &amp; Working with Autoscaling</li><li>Running Apache/Nginx Container in Kubernetes</li></ul></div></div></details>
 </section>
 
 <section>
@@ -469,6 +510,16 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
   document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeAll(); });
   document.querySelectorAll(".dd-menu a").forEach(function(a){a.addEventListener("click",closeAll);});
   addEventListener("resize",closeAll);
+})();
+</script>
+<script id="syllabus-js">
+(function(){
+  document.querySelectorAll("[data-syl]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var open=b.getAttribute("data-syl")==="open";
+      document.querySelectorAll(".mod").forEach(function(d){d.open=open;});
+    });
+  });
 })();
 </script>
 </body>

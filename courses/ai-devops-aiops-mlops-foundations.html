@@ -350,6 +350,26 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
 @media (min-width:861px){#mobile-menu{display:none!important}}
 @media (max-width:420px){#mobile-menu .btn.primary{display:inline-flex}}
 </style>
+<style id="syllabus-css">
+.syl-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:18px 0 14px}
+.syl-bar span{color:var(--muted);font-size:.95rem}
+.syl-bar button{font:inherit;font-size:.9rem;cursor:pointer;background:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.syl-bar button:hover{border-color:var(--accent);color:var(--accent)}
+.mod{border:1px solid var(--line);border-radius:12px;margin-top:10px;background:color-mix(in srgb,var(--bg) 96%,var(--accent))}
+.mod summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:14px 16px}
+.mod summary::-webkit-details-marker{display:none}
+.mod .n{font-weight:700;color:var(--accent);min-width:2ch}
+.mod .t{font-weight:600;flex:1;color:var(--ink)}
+.mod .c{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.mod summary::after{content:"+";color:var(--muted);font-size:1.2rem;line-height:1}
+.mod[open] summary::after{content:"\2212"}
+.mod[open]{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.mod .body{display:grid;gap:18px 28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));padding:2px 18px 18px}
+.mod h4{margin:0 0 8px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mod ul{margin:0;padding-left:18px}
+.mod li{margin:4px 0;line-height:1.45}
+@media (max-width:560px){.mod .c{display:none}.mod summary{padding:13px 14px}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -390,6 +410,16 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
       <div class="way"><h3>AIOps and MLOps foundations</h3><p>The basic ideas behind running AI-assisted operations and machine-learning workloads.</p></div>
       <div class="way"><h3>Working with Bedrock</h3><p>Use Amazon Bedrock for AI-assisted tasks in a controlled lab setting.</p></div>
   </div>
+</section>
+
+<section id="syllabus">
+  <p class="kicker">Full syllabus</p>
+  <h2 style="margin-top:14px">3 modules, from first topic to final practice</h2>
+  <p class="lede" style="margin-top:14px">Every module lists what you will be able to do, the topics covered and the hands-on practice. Open a module to see the detail.</p><p class="lede" style="margin-top:14px">Practice uses reviewed inputs, budget and privacy controls and human approval before any change. Remediation exercises run in a sandbox or as simulations only.</p>
+  <div class="syl-bar"><span>13 topics and 31 practice tasks in total</span><span><button type="button" data-syl="open">Expand all</button> <button type="button" data-syl="close">Collapse all</button></span></div>
+  <details class="mod"><summary><span class="n">01</span><span class="t">AI in DevOps</span><span class="c">5 topics · 9 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Introduction to AI in DevOps</li><li>Generative AI for Developers</li><li>GitHub Copilot, AWS CodeWhisperer (source terminology; compare with Amazon Q Developer), Azure Copilot</li><li>AI-assisted coding for Infrastructure as Code (Terraform, Ansible)</li><li>Use cases: Faster scripting, automated test generation, and pipeline optimization</li></ul></div><div><h4>Hands-on practice</h4><ul><li>AI-assisted Terraform Lab</li><li>Setup Terraform with AWS provider</li><li>Use CodeWhisperer (source terminology; compare with Amazon Q Developer) in VS Code; source-era Cloud9 setup (review environment before practice) to auto-generate Terraform resources (EC2, S3)</li><li>Validate and apply the generated infra</li><li>AI-assisted Ansible Lab</li><li>Write an Ansible Playbook with Copilot assistance to configure an Apache web server</li><li>Compare AI-generated vs manually written playbook</li><li>DevOps Chatbot Demo</li><li>Use Bedrock or OpenAI API to create a simple ChatOps assistant that responds to pipeline status queries</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">02</span><span class="t">AIOps and MLOps foundations</span><span class="c">5 topics · 11 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>What is AIOps?</li><li>Intelligent monitoring &amp; anomaly detection</li><li>AI for log analysis &amp; summarization</li><li>Integrating AI with CloudWatch &amp; Bedrock</li><li>MLOps basics: training, deployment, and monitoring</li></ul></div><div><h4>Hands-on practice</h4><ul><li>CloudWatch Anomaly Detection Lab</li><li>Enable anomaly detection on EC2 CPU utilization metric</li><li>Generate synthetic load and observe anomaly detection alarms</li><li>AI Log Summarization Lab</li><li>Stream application logs to CloudWatch Logs</li><li>Use AWS Bedrock (LLM) to summarize errors and incidents</li><li>Build Lambda function that auto-summarizes logs &amp; posts to Slack/MS Teams</li><li>Mini MLOps Lab</li><li>Train a small ML model (sklearn or TensorFlow) locally</li><li>Package model in Docker and deploy to EKS or SageMaker endpoint</li><li>Automate deployment with CI/CD pipeline</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">03</span><span class="t">AI-powered monitoring and controlled remediation</span><span class="c">3 topics · 11 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Self-healing infrastructure with AI</li><li>Integrating AI with CloudWatch, Bedrock, and Lambda</li><li>Real-world use case: auto-remediation of incidents</li></ul></div><div><h4>Hands-on practice</h4><ul><li>AI-Powered Monitoring Lab</li><li>Connect CloudWatch metrics (EC2, RDS, S3) to Bedrock</li><li>Create a dashboard that visualizes anomalies &amp; AI insights</li><li>AI-Driven Remediation Lab</li><li>Setup Lambda function triggered on anomaly detection alarm</li><li>Use Bedrock/LLM to classify issue &amp; recommend fix</li><li>Auto-execute remediation script (e.g., restart EC2, scale ASG, redeploy pod in EKS)</li><li>Final Project – AI-Integrated Ops Dashboard</li><li>Build a dashboard in Grafana that shows metrics, anomalies, and AI summaries</li><li>Simulate failure → AI detects, summarizes, and remediates automatically</li><li>Deliverable: Live demo of self-healing system</li></ul></div></div></details>
 </section>
 
 <section>
@@ -469,6 +499,16 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
   document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeAll(); });
   document.querySelectorAll(".dd-menu a").forEach(function(a){a.addEventListener("click",closeAll);});
   addEventListener("resize",closeAll);
+})();
+</script>
+<script id="syllabus-js">
+(function(){
+  document.querySelectorAll("[data-syl]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var open=b.getAttribute("data-syl")==="open";
+      document.querySelectorAll(".mod").forEach(function(d){d.open=open;});
+    });
+  });
 })();
 </script>
 </body>

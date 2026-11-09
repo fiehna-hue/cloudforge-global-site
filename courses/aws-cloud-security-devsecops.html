@@ -350,6 +350,26 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
 @media (min-width:861px){#mobile-menu{display:none!important}}
 @media (max-width:420px){#mobile-menu .btn.primary{display:inline-flex}}
 </style>
+<style id="syllabus-css">
+.syl-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:18px 0 14px}
+.syl-bar span{color:var(--muted);font-size:.95rem}
+.syl-bar button{font:inherit;font-size:.9rem;cursor:pointer;background:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.syl-bar button:hover{border-color:var(--accent);color:var(--accent)}
+.mod{border:1px solid var(--line);border-radius:12px;margin-top:10px;background:color-mix(in srgb,var(--bg) 96%,var(--accent))}
+.mod summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:center;padding:14px 16px}
+.mod summary::-webkit-details-marker{display:none}
+.mod .n{font-weight:700;color:var(--accent);min-width:2ch}
+.mod .t{font-weight:600;flex:1;color:var(--ink)}
+.mod .c{color:var(--muted);font-size:.85rem;white-space:nowrap}
+.mod summary::after{content:"+";color:var(--muted);font-size:1.2rem;line-height:1}
+.mod[open] summary::after{content:"\2212"}
+.mod[open]{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.mod .body{display:grid;gap:18px 28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));padding:2px 18px 18px}
+.mod h4{margin:0 0 8px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mod ul{margin:0;padding-left:18px}
+.mod li{margin:4px 0;line-height:1.45}
+@media (max-width:560px){.mod .c{display:none}.mod summary{padding:13px 14px}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -390,6 +410,24 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
       <div class="way"><h3>Supply-chain security</h3><p>Check what goes into your builds, so unsafe code and packages do not reach production.</p></div>
       <div class="way"><h3>Incident response</h3><p>Contain and recover from an incident with an approved plan you have practised.</p></div>
   </div>
+</section>
+
+<section id="syllabus">
+  <p class="kicker">Full syllabus</p>
+  <h2 style="margin-top:14px">11 modules, from first topic to final practice</h2>
+  <p class="lede" style="margin-top:14px">Every module lists what you will be able to do, the topics covered and the hands-on practice. Open a module to see the detail.</p>
+  <div class="syl-bar"><span>116 topics and 26 practice tasks in total</span><span><button type="button" data-syl="open">Expand all</button> <button type="button" data-syl="close">Collapse all</button></span></div>
+  <details class="mod"><summary><span class="n">01</span><span class="t">Cloud security and DevSecOps foundations</span><span class="c">9 topics · 2 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>DevOps → DevSecOps (Shift Left Strategy)</li><li>Shared Responsibility Model (All AWS Services)</li><li>Threat Modeling (STRIDE, DREAD)</li><li>OWASP Top 10 + OWASP Cloud Top 10</li><li>Secure SDLC &amp; DevSecOps Pipeline Design</li><li>Security Design Principles (Least Privilege, Defense in Depth)</li><li>Well-Architected Framework – Security Pillar</li><li>Zero Trust Architecture (ZTA)</li><li>Identity vs Resource Boundary Concepts</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Threat modeling for a sample app</li><li>Identify risks in insecure architecture</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">02</span><span class="t">IAM and advanced access controls</span><span class="c">14 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>IAM Users, Groups, Roles</li><li>IAM Policies (Inline vs Managed)</li><li>Policy Evaluation Logic (Explicit Deny)</li><li>Permission Boundaries</li><li>Session Policies</li><li>Cross-Account Access</li><li>STS &amp; Temporary Credentials</li><li>Identity Federation (SAML, OIDC)</li><li>AWS SSO / IAM Identity Center</li><li>Attribute-Based Access Control (ABAC)</li><li>Service Control Policies (SCPs)</li><li>Least Privilege Design</li><li>Privilege Escalation Techniques (Exam-focused)</li><li>IAM Access Analyzer (External Access detection)</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Cross-account role setup</li><li>Detect and fix privilege escalation</li><li>IAM policy debugging scenarios</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">03</span><span class="t">Detection, logging and threat analysis</span><span class="c">11 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>CloudTrail (Org Trail, Insights, Lake)</li><li>CloudWatch Logs, Metrics, Alarms</li><li>VPC Flow Logs</li><li>ELB &amp; S3 Access Logs</li><li>GuardDuty (All detectors)</li><li>AWS Security Hub</li><li>Amazon Detective</li><li>AWS Inspector (EC2, ECR, Lambda)</li><li>EventBridge Rules</li><li>SNS for Alerting</li><li>Automation triggers</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Setup centralized logging account</li><li>Detect suspicious API activity</li><li>GuardDuty findings analysis</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">04</span><span class="t">Infrastructure and network security</span><span class="c">11 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Security Groups vs NACLs</li><li>Private vs Public Subnets</li><li>NAT Gateway vs NAT Instance</li><li>VPC Endpoints (Interface &amp; Gateway)</li><li>PrivateLink</li><li>AWS WAF (Rules, Rate limiting)</li><li>AWS Shield (Standard vs Advanced)</li><li>Firewall Manager</li><li>Network Firewall</li><li>VPN &amp; Direct Connect security</li><li>DNS security (Route 53 Resolver, DNS Firewall)</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Build secure multi-tier VPC</li><li>WAF rule implementation</li><li>Block malicious IP traffic</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">05</span><span class="t">Data protection and encryption</span><span class="c">15 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Encryption at Rest vs In Transit</li><li>Envelope Encryption</li><li>TLS, ACM Certificates</li><li>CMK Types (Customer vs AWS managed)</li><li>Key Policies vs IAM Policies</li><li>Grants</li><li>Key Rotation</li><li>Multi-Region Keys</li><li>S3 Security (Block Public Access, Bucket Policies)</li><li>EBS, EFS Encryption</li><li>RDS Encryption</li><li>DynamoDB Encryption</li><li>Secrets Manager vs SSM Parameter Store</li><li>Macie (PII detection)</li><li>Backup Security (AWS Backup)</li></ul></div><div><h4>Hands-on practice</h4><ul><li>KMS key policy troubleshooting</li><li>Secure S3 with encryption + access control</li><li>Secrets rotation implementation</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">06</span><span class="t">Application and CI/CD security</span><span class="c">12 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Pipeline Security (Jenkins, GitHub Actions, GitLab CI)</li><li>Secrets Handling in Pipelines</li><li>Artifact Security</li><li>SAST (Static Analysis)</li><li>DAST (Dynamic Testing)</li><li>SCA (Dependency Scanning)</li><li>Docker Hardening</li><li>ECR Scan (Native + Trivy/Grype)</li><li>SBOM (Software Bill of Materials)</li><li>API Gateway Security (Auth, throttling)</li><li>Lambda Security (IAM, env variables)</li><li>Step Functions security</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Build secure CI/CD pipeline</li><li>Integrate SAST + container scanning</li><li>Break &amp; fix vulnerable pipeline</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">07</span><span class="t">Container and Kubernetes security</span><span class="c">10 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Docker security best practices</li><li>Rootless containers</li><li>Image signing (cosign)</li><li>IAM Roles for Service Accounts (IRSA)</li><li>Pod Security Standards</li><li>Network Policies</li><li>RBAC Deep Dive</li><li>Admission Controllers (OPA/Gatekeeper)</li><li>Secrets encryption in etcd</li><li>Runtime security tools (Falco)</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Secure EKS cluster setup</li><li>RBAC + IRSA implementation</li><li>Scan Kubernetes workloads</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">08</span><span class="t">Incident response and automation</span><span class="c">9 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Preparation → Detection → Containment → Recovery</li><li>GuardDuty + Security Hub integration</li><li>CloudTrail forensic analysis</li><li>AWS Systems Manager for remediation</li><li>Lambda-based IR automation</li><li>Step Functions for workflows</li><li>Automated quarantine (EC2 isolation)</li><li>Snapshot analysis</li><li>Log correlation</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Simulate brute force attack</li><li>Auto-isolate compromised EC2</li><li>Build IR automation pipeline</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">09</span><span class="t">Governance, risk and compliance</span><span class="c">11 topics · 3 practice</span></summary><div class="body"><div><h4>Topics</h4><ul><li>AWS Organizations</li><li>SCP Strategy Design</li><li>Multi-account security architecture</li><li>AWS Config Rules</li><li>AWS Audit Manager</li><li>AWS Artifact</li><li>CIS Benchmarks</li><li>NIST, ISO 27001 basics</li><li>GDPR concepts (high-level)</li><li>Terraform Security (tfsec, Checkov)</li><li>CloudFormation Guard</li></ul></div><div><h4>Hands-on practice</h4><ul><li>Enforce compliance via SCP</li><li>Scan Terraform for vulnerabilities</li><li>Config rule violations remediation</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">10</span><span class="t">Advanced security architecture</span><span class="c">6 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>Cross-region DR security</li><li>Secure Multi-account Architecture (Landing Zone)</li><li>AWS Control Tower security</li><li>Data exfiltration prevention strategies</li><li>Chaos Engineering for security</li><li>Red Team vs Blue Team basics</li></ul></div></div></details>
+  <details class="mod"><summary><span class="n">11</span><span class="t">End-to-end DevSecOps security capstone</span><span class="c">8 topics</span></summary><div class="body"><div><h4>Topics</h4><ul><li>GitHub → CI/CD → Build → Scan → Deploy (EKS)</li><li>IAM least privilege</li><li>Secrets Manager integration</li><li>SAST + SCA + Image Scan</li><li>KMS encryption</li><li>WAF protection</li><li>GuardDuty monitoring</li><li>Incident response automation</li></ul></div></div></details>
 </section>
 
 <section>
@@ -469,6 +507,16 @@ nav.links .dd-box a:hover{background:color-mix(in srgb,var(--accent) 10%,transpa
   document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeAll(); });
   document.querySelectorAll(".dd-menu a").forEach(function(a){a.addEventListener("click",closeAll);});
   addEventListener("resize",closeAll);
+})();
+</script>
+<script id="syllabus-js">
+(function(){
+  document.querySelectorAll("[data-syl]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var open=b.getAttribute("data-syl")==="open";
+      document.querySelectorAll(".mod").forEach(function(d){d.open=open;});
+    });
+  });
 })();
 </script>
 </body>
