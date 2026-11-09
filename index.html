@@ -447,6 +447,31 @@ nav.links>a.active{color:var(--ink)}
 .hero-art{transition:translate .25s ease-out}
 @media (prefers-reduced-motion:reduce){.hero h1,.hero .cta,.hero .facts{animation:none}.hero h1 em{animation:none;background-size:100% .09em}.btn,.svc,.track,.way,.role{transition:none}.btn:hover,.svc:hover,.track:hover,.way:hover,.role:hover{translate:none}}
 </style>
+<style id="photos">
+.split2{display:grid;gap:clamp(24px,5vw,56px);grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:center}
+.ph{margin:0;overflow:hidden;border-radius:18px;border:1px solid var(--line);box-shadow:0 18px 40px rgba(19,28,38,.14);background:var(--surface)}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.04)}
+#assurance .split{align-items:start}
+#assurance .ways{align-content:start}
+.ph-rack{aspect-ratio:4/3}
+.ph-eng{margin-top:26px;aspect-ratio:1/1;max-width:420px}
+.ph-wide{margin-top:34px;aspect-ratio:21/9}
+.band-sec{padding-block:clamp(28px,5vw,56px)}
+.band{position:relative;overflow:hidden;border-radius:22px;min-height:clamp(320px,38vw,440px);display:grid;align-items:center;color:#fff;box-shadow:0 22px 50px rgba(8,14,22,.28)}
+.band>img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;z-index:0;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,12,24,.88) 0%,rgba(6,12,24,.62) 48%,rgba(6,12,24,.15) 100%)}
+.band-in{position:relative;z-index:2;max-width:560px;padding:clamp(26px,5vw,56px)}
+.band .kicker{color:#ffb089}
+.band h2{color:#fff;margin:12px 0 0}
+.band h2::after{display:none}
+.band .lede{color:rgba(255,255,255,.86);margin-top:14px}
+.band .btn.primary{margin-top:8px}
+.js-motion .ph.rv{clip-path:inset(0 0 14% 0 round 18px)}
+.js-motion .ph.rv.in{clip-path:inset(0 round 18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1),clip-path 1s cubic-bezier(.2,.7,.2,1)}
+@media (max-width:860px){.split2{grid-template-columns:minmax(0,1fr)}.ph-eng{max-width:100%;aspect-ratio:4/3}.ph-wide{aspect-ratio:16/9}.band::after{background:linear-gradient(180deg,rgba(6,12,24,.55),rgba(6,12,24,.9))}}
+@media (prefers-reduced-motion:reduce){.ph img{transition:none}.ph:hover img{transform:none}.js-motion .ph.rv{clip-path:none}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -568,6 +593,7 @@ nav.links>a.active{color:var(--ink)}
     <div>
       <p class="kicker">Security and quality</p>
       <h2 style="margin-top:14px">Careful with your systems and your data</h2>
+      <figure class="ph ph-eng"><img src="/img/cf-engineer.webp" width="900" height="915" alt="An engineer with a laptop checking equipment in a server room" loading="lazy" decoding="async"></figure>
     </div>
     <div class="ways">
       <div class="way"><h3>Least access, removed when done</h3><p>We ask only for the access a job needs, and we remove it when the work ends.</p></div>
@@ -577,7 +603,7 @@ nav.links>a.active{color:var(--ink)}
   </div>
 </section>
 
-<section id="clients">
+<section id="clients"><div class="split2"><div>
   <p class="kicker">Who we work with</p>
   <h2 style="margin-top:14px">Support that fits your size</h2>
   <div class="roles">
@@ -587,7 +613,7 @@ nav.links>a.active{color:var(--ink)}
     <div class="role">Individuals and students</div>
   </div>
   <p class="fine">Tell us what you have today and what you need next. We will tell you honestly which service fits.</p>
-</section>
+</div><figure class="ph ph-rack"><img src="/img/cf-rack.webp" width="1200" height="800" alt="A technician fitting a server into a data centre rack with network cables connected" loading="lazy" decoding="async"></figure></div></section>
 
 <section id="academy">
   <p class="kicker">CloudForge Academy</p>
@@ -598,6 +624,7 @@ nav.links>a.active{color:var(--ink)}
     <img class="on-dark" src="/logo-dark.webp" width="1200" height="420" alt="CloudForge Global Academy. Your Global Technology Career Starts Here." loading="lazy">
   </div>
 
+  <figure class="ph ph-wide"><img src="/img/cf-devops.webp" width="1400" height="839" alt="Hands typing on a laptop with DevOps tool icons shown over the screen" loading="lazy" decoding="async"></figure>
   <div class="subhead">
     <p class="kicker">The six-month roadmap</p>
   </div>
@@ -682,6 +709,8 @@ nav.links>a.active{color:var(--ink)}
     </aside>
   </div>
 </section>
+
+<section class="band-sec" aria-labelledby="band-h"><div class="band"><img src="/img/cf-datacenter.webp" width="1600" height="900" alt="" loading="lazy" decoding="async"><div class="band-in"><p class="kicker">Ready when you are</p><h2 id="band-h">Need something built, fixed or moved?</h2><p class="lede">Tell us what you need and we will reply by email with the next steps.</p><p><a class="btn primary" href="#enquire">Request a service</a></p></div></div></section>
 
 <section id="faq">
   <p class="kicker">Questions</p>
@@ -957,6 +986,24 @@ nav.links>a.active{color:var(--ink)}
       hero.addEventListener("pointerleave",function(){ art.style.translate="0 0"; });
     }
   }
+})();
+</script>
+<script id="photos-js">
+(function(){
+  var imgs=document.querySelectorAll(".band>img");
+  if(!imgs.length||window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var t=false;
+  function go(){
+    imgs.forEach(function(im){
+      var r=im.parentElement.getBoundingClientRect();
+      if(r.bottom<0||r.top>innerHeight) return;
+      var k=(r.top+r.height/2-innerHeight/2)/innerHeight;
+      im.style.transform="translateY("+(k*-34).toFixed(1)+"px)";
+    });
+    t=false;
+  }
+  addEventListener("scroll",function(){ if(!t){t=true;requestAnimationFrame(go);} },{passive:true});
+  go();
 })();
 </script>
 </body>
