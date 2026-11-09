@@ -472,6 +472,11 @@ nav.links>a.active{color:var(--ink)}
 @media (max-width:860px){.split2{grid-template-columns:minmax(0,1fr)}.ph-eng{max-width:100%;aspect-ratio:4/3}.ph-wide{aspect-ratio:16/9}.band::after{background:linear-gradient(180deg,rgba(6,12,24,.55),rgba(6,12,24,.9))}}
 @media (prefers-reduced-motion:reduce){.ph img{transition:none}.ph:hover img{transform:none}.js-motion .ph.rv{clip-path:none}}
 </style>
+<style id="photos2">
+.duo{margin-top:clamp(28px,4vw,44px);display:grid;gap:clamp(14px,2.4vw,24px);grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.duo .ph{height:clamp(240px,30vw,400px)}
+@media (max-width:700px){.duo{grid-template-columns:minmax(0,1fr)}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="wrap">
@@ -581,6 +586,8 @@ nav.links>a.active{color:var(--ink)}
     <article class="track"><h3>Keeping your team working</h3><p>Help desk for user accounts, devices, email and software, so small problems get fixed before they stop anyone.</p></article>
     <article class="track"><h3>On-site technical work</h3><p>A technician at your location for installs, cabling, equipment swaps and upgrades, then testing and documentation.</p></article>
   </div>
+
+  <div class="duo"><figure class="ph"><img src="/img/cf-network.webp" width="1400" height="933" alt="A technician fitting network cables into a rack with a power tool" loading="lazy" decoding="async"></figure><figure class="ph"><img src="/img/cf-onsite.webp" width="740" height="558" alt="Two engineers in hard hats and safety vests checking a server rack" loading="lazy" decoding="async"></figure></div>
 
   <div class="subhead">
     <p class="kicker">Technology we work with</p>
